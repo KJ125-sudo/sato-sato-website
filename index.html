@@ -17,41 +17,33 @@
   <meta name="theme-color" content="#1b3f7a">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/src/styles/site.css">
 </head>
 <body>
   <div class="watermark" aria-hidden="true"></div>
 
   <header class="nav">
-    <div class="nav__left">
-      <a class="btn btn--ghost magnetic" href="#manifesto">What</a>
-    </div>
     <a class="nav__logo magnetic" href="#" aria-label="Sato Sato home">
       <img src="/images/sato-sato-logo-cream.png" alt="" width="120" height="45" draggable="false">
     </a>
-    <div class="nav__right" id="nav-links">
-      <a class="btn btn--ghost magnetic nav__mobile-only" href="#manifesto">What</a>
-      <a class="btn btn--ghost magnetic" href="#range">Range</a>
-      <a class="btn btn--primary magnetic" href="#find">Find us</a>
-    </div>
-    <button class="nav__toggle" id="nav-toggle" type="button" aria-label="Menu">
-      <span></span>
-    </button>
   </header>
 
   <main class="page">
     <section class="hero" id="hero" aria-label="Sato Sato">
-      <canvas id="hero-bubbles" class="hero__bubbles" aria-hidden="true"></canvas>
       <div class="hero__inner">
         <div class="hero__type">
           <p class="eyebrow eyebrow--center hero__line">Traditional Sato. Made Modern</p>
-          <h1 class="text-display text-display--center hero__line">Cold.<br>Sparkling.<br>Thai.</h1>
+          <h1 class="text-display text-display--center hero__line" id="hero-headline">Cold.<br>Sparkling.<br>Thai.</h1>
           <div class="hero__cta-row hero__cta-row--center hero__line">
-            <a class="btn btn--primary magnetic" href="#find">Find us</a>
+            <a class="btn btn--primary btn--origin" href="#find">
+              <span class="btn-origin-fill" aria-hidden="true"></span>
+              <span class="btn-origin-label">Find us</span>
+            </a>
           </div>
         </div>
-        <div class="hero__can-stage" id="hero-can-stage">
+        <div class="hero__can-stage can-stage" id="hero-can-stage">
+          <canvas class="can-bubbles" aria-hidden="true"></canvas>
           <img
             id="hero-can"
             class="hero__can"
@@ -84,7 +76,9 @@
               </p>
             </div>
           </div>
-          <img
+          <div class="can-stage manifesto-can-stage">
+            <canvas class="can-bubbles" aria-hidden="true"></canvas>
+            <img
             id="manifesto-can"
             class="manifesto-can"
             src="/images/can-range-original.png"
@@ -95,6 +89,7 @@
             draggable="false"
             aria-hidden="true"
           >
+          </div>
         </div>
       </div>
     </section>
@@ -118,7 +113,9 @@
           <span class="badge badge--primary" id="range-badge">Hero</span>
         </div>
         <div class="range-right reveal">
-          <img
+          <div class="can-stage range-can-stage">
+            <canvas class="can-bubbles" aria-hidden="true"></canvas>
+            <img
             id="range-can"
             class="range-hero-can"
             src="/images/can-range-original.png"
@@ -127,6 +124,7 @@
             height="498"
             draggable="false"
           >
+          </div>
           <div class="range-thumbs">
             <button type="button" class="range-thumb is-active magnetic" data-range-thumb="original" aria-label="Original">
               <img src="/images/can-range-original.png" alt="" loading="lazy">

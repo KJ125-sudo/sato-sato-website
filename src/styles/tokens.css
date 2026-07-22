@@ -65,7 +65,7 @@
   /* Layout */
   --page-max-width: 1440px;
   --section-gap: clamp(80px, 12vh, 120px);
-  --nav-h: 72px;
+  --nav-h: 104px;
   --ease: cubic-bezier(0.16, 1, 0.3, 1);
 
   /* Radii */

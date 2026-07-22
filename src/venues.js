@@ -41,6 +41,12 @@ export const VENUES = [
     instagram: 'https://www.instagram.com/rice9gelato/',
     maps: 'https://share.google/oAiBRvXmFwZ3f72D1',
   },
+  {
+    name: 'Craft Estate',
+    location: 'Bangkok',
+    instagram: 'https://www.instagram.com/craft.estate/?hl=en',
+    maps: 'https://share.google/8bNbkS8PT931WYfGC',
+  },
 ];
 
 const ICON_INSTAGRAM = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4.5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>`;

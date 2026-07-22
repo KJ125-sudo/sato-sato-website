@@ -8,7 +8,7 @@ export function initManifesto() {
   const pin = document.getElementById('manifesto-pin');
   const stage = document.getElementById('manifesto-stage');
   const lines = document.querySelectorAll('[data-manifesto-line]');
-  const can = document.getElementById('manifesto-can');
+  const canStage = document.getElementById('manifesto-can')?.closest('.can-stage');
 
   if (!pin || !stage || !lines.length) return;
 
@@ -54,8 +54,8 @@ export function initManifesto() {
         line.style.transform = `translateY(${(1 - eased) * 20}px)`;
       });
 
-      if (can) {
-        can.style.transform = `translateY(${-p * 48}px) rotate(${-6 + p * 8}deg)`;
+      if (canStage) {
+        canStage.style.transform = `translateY(${-p * 48}px) rotate(${-6 + p * 8}deg)`;
       }
     },
   });

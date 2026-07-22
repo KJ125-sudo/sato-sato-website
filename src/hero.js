@@ -1,6 +1,6 @@
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger.js';
-import { startCanBubbles } from './can-bubbles.js';
+import { initVariableFontProximity } from './variable-font-proximity.js';
 import { canUseDesktopFx, prefersReducedMotion } from './utils.js';
 
 gsap.registerPlugin(ScrollTrigger);
@@ -9,13 +9,22 @@ export function initHero() {
   const section = document.getElementById('hero');
   const can = document.getElementById('hero-can');
   const canStage = document.getElementById('hero-can-stage');
-  const bubbleCanvas = document.getElementById('hero-bubbles');
   const watermark = document.querySelector('.watermark');
 
   if (!section) return;
 
-  if (bubbleCanvas && !prefersReducedMotion()) {
-    startCanBubbles(bubbleCanvas);
+  const headline = document.getElementById('hero-headline');
+  const typeContainer = section.querySelector('.hero__type');
+
+  if (headline && typeContainer) {
+    initVariableFontProximity(headline, {
+      container: typeContainer,
+      fromWeight: 900,
+      toWeight: 900,
+      fromScale: 1,
+      toScale: 1.045,
+      radius: 120,
+    });
   }
 
   const lines = section.querySelectorAll('.hero__line');

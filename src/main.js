@@ -1,5 +1,7 @@
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger.js';
+import { initOriginButtons } from './origin-button.js';
+import { initCanBubbles } from './can-bubbles.js';
 import { initCursor } from './cursor.js';
 import { initFind } from './find.js';
 import { initHero } from './hero.js';
@@ -10,19 +12,6 @@ import { initRange } from './range.js';
 import { prefersReducedMotion } from './utils.js';
 
 gsap.registerPlugin(ScrollTrigger);
-
-function initNav() {
-  const navToggle = document.getElementById('nav-toggle');
-  const navLinks = document.getElementById('nav-links');
-
-  navToggle?.addEventListener('click', () => {
-    navLinks?.classList.toggle('is-open');
-  });
-
-  navLinks?.querySelectorAll('a').forEach((link) => {
-    link.addEventListener('click', () => navLinks?.classList.remove('is-open'));
-  });
-}
 
 function initReveals() {
   if (prefersReducedMotion()) {
@@ -46,10 +35,16 @@ function initReveals() {
 }
 
 async function boot() {
-  initNav();
   initCursor();
   initMagnetic();
   initLenis();
+  initOriginButtons();
+
+  if (!prefersReducedMotion()) {
+    requestAnimationFrame(() => {
+      initCanBubbles();
+    });
+  }
 
   initHero();
   initManifesto();
