@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sato Sato — Cold, Sparkling Thai Sato</title>
+  <meta name="description" content="Cold, sparkling sato brewed from Thai sticky rice. Original, Lime, Cantaloupe, Krajiab. Thailand's drink — arrived now.">
+  <meta property="og:title" content="Sato Sato">
+  <meta property="og:description" content="Cold. Sparkling. Thai. Modern sato for the Thai table.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="/images/can-range-original.png">
+  <meta property="og:image:alt" content="Sato Sato Original can">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Sato Sato">
+  <meta name="twitter:description" content="Cold. Sparkling. Thai. Modern sato for the Thai table.">
+  <meta name="twitter:image" content="/images/can-range-original.png">
+  <meta name="theme-color" content="#1b3f7a">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/src/styles/site.css">
+</head>
+<body>
+  <div class="watermark" aria-hidden="true"></div>
+
+  <header class="nav">
+    <div class="nav__left">
+      <a class="btn btn--ghost magnetic" href="#manifesto">What</a>
+    </div>
+    <a class="nav__logo magnetic" href="#" aria-label="Sato Sato home">
+      <img src="/images/sato-sato-logo-cream.png" alt="" width="120" height="45" draggable="false">
+    </a>
+    <div class="nav__right" id="nav-links">
+      <a class="btn btn--ghost magnetic nav__mobile-only" href="#manifesto">What</a>
+      <a class="btn btn--ghost magnetic" href="#range">Range</a>
+      <a class="btn btn--primary magnetic" href="#find">Find us</a>
+    </div>
+    <button class="nav__toggle" id="nav-toggle" type="button" aria-label="Menu">
+      <span></span>
+    </button>
+  </header>
+
+  <main class="page">
+    <section class="hero" id="hero" aria-label="Sato Sato">
+      <canvas id="hero-bubbles" class="hero__bubbles" aria-hidden="true"></canvas>
+      <div class="hero__inner">
+        <div class="hero__type">
+          <p class="eyebrow eyebrow--center hero__line">Traditional Sato. Made Modern</p>
+          <h1 class="text-display text-display--center hero__line">Cold.<br>Sparkling.<br>Thai.</h1>
+          <div class="hero__cta-row hero__cta-row--center hero__line">
+            <a class="btn btn--primary magnetic" href="#find">Find us</a>
+          </div>
+        </div>
+        <div class="hero__can-stage" id="hero-can-stage">
+          <img
+            id="hero-can"
+            class="hero__can"
+            src="/images/can-range-original.png"
+            alt="Sato Sato Original can"
+            width="400"
+            height="712"
+            draggable="false"
+          >
+        </div>
+      </div>
+    </section>
+
+    <hr class="divider">
+
+    <section class="manifesto" id="manifesto" aria-label="What it is">
+      <div class="manifesto-pin" id="manifesto-pin">
+        <div class="manifesto-stage" id="manifesto-stage">
+          <div class="manifesto-copy">
+            <p class="eyebrow">Sato is sato</p>
+            <div class="manifesto-lines">
+              <p class="manifesto-line text-heading" data-manifesto-line>
+                Thai food is the most travelled cuisine in the world.
+              </p>
+              <p class="manifesto-line text-heading" data-manifesto-line>
+                It travelled without its drink.
+              </p>
+              <p class="manifesto-line text-heading-lg" data-manifesto-line>
+                Sato Sato is that drink.
+              </p>
+            </div>
+          </div>
+          <img
+            id="manifesto-can"
+            class="manifesto-can"
+            src="/images/can-range-original.png"
+            alt=""
+            width="280"
+            height="498"
+            loading="lazy"
+            draggable="false"
+            aria-hidden="true"
+          >
+        </div>
+      </div>
+    </section>
+
+    <hr class="divider">
+
+    <section class="section section--range" id="range" aria-labelledby="range-title">
+      <div class="section-watermark" aria-hidden="true"></div>
+      <div class="section__inner range-explorer">
+        <div class="range-left reveal">
+          <p class="eyebrow">The range</p>
+          <h2 class="text-heading-lg" id="range-title">Four flavours.</h2>
+          <p class="text-body">Drink cold. Served at the table.</p>
+          <div class="range-pills" role="tablist" aria-label="Flavours">
+            <button type="button" class="range-pill is-active magnetic" data-range-pill="original">Original</button>
+            <button type="button" class="range-pill magnetic" data-range-pill="lime">Lime</button>
+            <button type="button" class="range-pill magnetic" data-range-pill="cantaloupe">Cantaloupe</button>
+            <button type="button" class="range-pill magnetic" data-range-pill="krajiab">Krajiab</button>
+          </div>
+          <p class="range-active-name" id="range-name">Original</p>
+          <span class="badge badge--primary" id="range-badge">Hero</span>
+        </div>
+        <div class="range-right reveal">
+          <img
+            id="range-can"
+            class="range-hero-can"
+            src="/images/can-range-original.png"
+            alt="Sato Sato Original"
+            width="280"
+            height="498"
+            draggable="false"
+          >
+          <div class="range-thumbs">
+            <button type="button" class="range-thumb is-active magnetic" data-range-thumb="original" aria-label="Original">
+              <img src="/images/can-range-original.png" alt="" loading="lazy">
+            </button>
+            <button type="button" class="range-thumb magnetic" data-range-thumb="lime" aria-label="Lime">
+              <img src="/images/can-range-lime.png" alt="" loading="lazy">
+            </button>
+            <button type="button" class="range-thumb magnetic" data-range-thumb="cantaloupe" aria-label="Cantaloupe">
+              <img src="/images/can-range-cantaloupe.png" alt="" loading="lazy">
+            </button>
+            <button type="button" class="range-thumb magnetic" data-range-thumb="krajiab" aria-label="Krajiab">
+              <img src="/images/can-range-krajiab.png" alt="" loading="lazy">
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <hr class="divider">
+
+    <section class="section section--find" id="find" aria-labelledby="find-title">
+      <div class="section__inner">
+        <div class="find-head reveal">
+          <div>
+            <p class="eyebrow">Find us</p>
+            <h2 class="text-heading-lg" id="find-title">Bangkok.<br>At the table.</h2>
+          </div>
+          <div class="find-contact">
+            <a class="magnetic" href="mailto:hello@satosato.com">hello@satosato.com</a>
+            <span>Stock enquiries</span>
+          </div>
+        </div>
+        <div class="venues" id="venues"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>สาโท สาโท · Drink responsibly</p>
+    <p>© 2026 Sato Sato</p>
+  </footer>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
