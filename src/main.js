@@ -1,5 +1,6 @@
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger.js';
+import { initAgeGate } from './age-gate.js';
 import { initOriginButtons } from './origin-button.js';
 import { initCanBubbles } from './can-bubbles.js';
 import { initCursor } from './cursor.js';
@@ -55,4 +56,4 @@ async function boot() {
   ScrollTrigger.refresh();
 }
 
-boot();
+initAgeGate(boot);

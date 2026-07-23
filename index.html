@@ -21,6 +21,38 @@
   <link rel="stylesheet" href="/src/styles/site.css">
 </head>
 <body>
+  <div class="age-gate" id="age-gate" role="dialog" aria-modal="true" aria-labelledby="age-gate-title">
+    <div class="age-gate__overlay" aria-hidden="true"></div>
+    <div class="age-gate__panel">
+      <img
+        class="age-gate__logo"
+        src="/images/sato-sato-logo-cream.png"
+        alt="Sato Sato"
+        width="120"
+        height="45"
+        draggable="false"
+      >
+      <div class="age-gate__prompt">
+        <p class="eyebrow eyebrow--center">Age verification</p>
+        <h1 class="text-heading age-gate__title" id="age-gate-title">Are you 21<br>or older?</h1>
+        <p class="text-body text-body--center age-gate__copy">
+          You must be of legal drinking age to enter this site. Please confirm your age to continue.
+        </p>
+        <div class="age-gate__actions">
+          <button type="button" class="btn btn--primary" data-age-gate="yes">Yes</button>
+          <button type="button" class="btn btn--ghost" data-age-gate="no">No</button>
+        </div>
+      </div>
+      <div class="age-gate__declined" hidden>
+        <p class="eyebrow eyebrow--center">Access denied</p>
+        <p class="text-body text-body--center age-gate__copy">
+          Sorry, you must be 21 or older to visit this site.
+        </p>
+      </div>
+      <p class="age-gate__legal">Drink responsibly · สาโท สาโท</p>
+    </div>
+  </div>
+
   <div class="watermark" aria-hidden="true"></div>
 
   <header class="nav">
