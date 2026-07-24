@@ -8,7 +8,10 @@ const brandImages = path.join(root, '..', 'sato-sato-codex-build-pack', 'public'
 const distImages = path.join(root, 'dist', 'images');
 
 function hasImages(dir) {
-  return existsSync(path.join(dir, 'can-range-original.png'));
+  return (
+    existsSync(path.join(dir, 'can-range-original.png')) ||
+    existsSync(path.join(dir, 'can-range-original.webp'))
+  );
 }
 
 if (!hasImages(imagesDir) && hasImages(brandImages)) {
