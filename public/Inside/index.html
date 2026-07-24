@@ -2939,7 +2939,7 @@
     <section class="scene" id="s5a" aria-label="Praew — Primary persona">
       <div id="s5a-video-wrap">
         <div id="s5a-video-inner">
-          <video id="s5a-video" data-src="/images/praew-intro.web.mp4" muted loop playsinline preload="none"></video>
+          <video id="s5a-video" data-src="/images/praew-intro.web.mp4" poster="/images/praew-intro-poster.webp" muted loop playsinline preload="none"></video>
           <div id="s5a-grad"></div>
           <div id="s5a-overlay">
             <span id="s5a-kicker">Primary persona</span>
@@ -3139,7 +3139,7 @@
     <section class="scene" id="s-praew-3" aria-label="The moment">
       <div id="sp3-video-wrap">
         <div id="sp3-video-inner">
-          <video id="sp3-video" data-src="/images/the-moment.web.mp4" muted loop playsinline preload="none"></video>
+          <video id="sp3-video" data-src="/images/the-moment.web.mp4" poster="/images/the-moment-poster.webp" muted loop playsinline preload="none"></video>
           <div id="sp3-grad"></div>
           <div id="sp3-overlay">
             <span id="sp3-kicker">The moment</span>
@@ -4432,8 +4432,8 @@
     const PL_SECTION_FADE_START = 0.90;
 
     const PL_TRACKS = [
-      { id:'day',   t0:0.06, t1:0.60, src:'/Inside/audio/day-1.m4a',   startAt:73, song:'Running Out', artist:'HYBS',  day:true  },
-      { id:'night', t0:0.50, t1:1.00, src:'/Inside/audio/night-1.m4a', startAt:53, song:'ล้มเหลวเป็นตัวเอง', artist:'4EVE', day:false },
+      { id:'day',   t0:0.06, t1:0.60, src:'/Inside/audio/day-1.m4a',   startAt:0, song:'Running Out', artist:'HYBS',  day:true  },
+      { id:'night', t0:0.50, t1:1.00, src:'/Inside/audio/night-1.m4a', startAt:0, song:'ล้มเหลวเป็นตัวเอง', artist:'4EVE', day:false },
     ];
 
     const PL_ZONES = [
@@ -4448,11 +4448,14 @@
     ];
 
     // Scroll-synced audio — day-1.m4a + night-1.m4a in ./audio/
+    // Sources are assigned lazily in plStartTrack so night isn't fetched until the fade.
     let plAudioCtx  = null;
     let plGainDay   = null;
     let plGainNight = null;
     const plAudDay   = new Audio();
     const plAudNight = new Audio();
+    plAudDay.preload = 'none';
+    plAudNight.preload = 'none';
 
     function plInitAudio() {
       if (plAudioCtx) return;
@@ -4462,10 +4465,6 @@
         plGainNight = plAudioCtx.createGain(); plGainNight.gain.value = 0;
         plAudioCtx.createMediaElementSource(plAudDay).connect(plGainDay).connect(plAudioCtx.destination);
         plAudioCtx.createMediaElementSource(plAudNight).connect(plGainNight).connect(plAudioCtx.destination);
-        plAudDay.src   = PL_TRACKS[0].src;
-        plAudNight.src = PL_TRACKS[1].src;
-        plAudDay.preload   = 'none';
-        plAudNight.preload = 'none';
       } catch (e) {
         console.warn('She Listens audio init failed', e);
       }
@@ -4583,6 +4582,12 @@
       if (!track) return;
       const aud = trackId === 'day' ? plAudDay : plAudNight;
 
+      // Assign src only when this track is needed (night waits until the fade).
+      if (!aud.src || !aud.src.includes(track.src)) {
+        aud.src = track.src;
+        aud.preload = 'auto';
+      }
+
       const playFromChorus = () => {
         if (aud.readyState >= 1) {
           aud.currentTime = track.startAt;
@@ -4597,7 +4602,6 @@
         return;
       }
 
-      aud.preload = 'auto';
       aud.addEventListener('canplay', playFromChorus, { once: true });
       aud.addEventListener('error', () => console.warn('She Listens audio failed to load', trackId, aud.error), { once: true });
       aud.load();

@@ -98,14 +98,21 @@ async function optimizeImage(srcPath, ref) {
   if (srcKb < MIN_KB) return null;
 
   const meta = await sharp(srcPath).metadata();
-  const maxWidth = ref.includes('sky') || ref.includes('clouds') || ref.includes('landscape') ? 2160 : 1920;
+  const maxWidth = ref.includes('sky') || ref.includes('clouds') || ref.includes('landscape')
+    ? 2160
+    : ref.includes('product-card') || ref.includes('hero-can') || ref.includes('ticker')
+      ? 900
+      : ref.includes('bento')
+        ? 1200
+        : 1600;
+  const quality = ref.includes('product-card') || ref.includes('ticker') ? 75 : 80;
   const width = meta.width && meta.width > maxWidth ? maxWidth : undefined;
 
   if (!dryRun) {
     await sharp(srcPath)
       .rotate()
       .resize({ width, withoutEnlargement: true })
-      .webp({ quality: 82, effort: 4 })
+      .webp({ quality, effort: 4 })
       .toFile(outPath);
   }
 

@@ -13,16 +13,6 @@ export function initRange() {
 
   renderProductGrid(grid);
 
-  grid.querySelectorAll('.product-card__can').forEach((img) => {
-    const redesignSrc = img.dataset.productSrc;
-    if (!redesignSrc) return;
-
-    const test = new Image();
-    test.onload = () => { img.src = redesignSrc; };
-    test.onerror = () => {};
-    test.src = redesignSrc;
-  });
-
   if (prefersReducedMotion()) return;
 
   const cards = grid.querySelectorAll('.product-card');

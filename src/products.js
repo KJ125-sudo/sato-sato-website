@@ -12,12 +12,12 @@ export function renderProductCard(flavour) {
         <div class="product-card__can-wrap">
           <img
             class="product-card__can"
-            src="${flavour.image}"
-            data-product-src="${flavour.productImage}"
+            src="${flavour.productImage}"
             alt="Sato Sato ${flavour.name}"
             width="220"
             height="392"
             loading="lazy"
+            decoding="async"
             draggable="false"
           >
         </div>
