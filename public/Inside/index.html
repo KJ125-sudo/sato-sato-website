@@ -4374,8 +4374,8 @@
     const PL_SECTION_FADE_START = 0.90;
 
     const PL_TRACKS = [
-      { id:'day',   t0:0.06, t1:0.60, src:'./audio/day-1.m4a',   startAt:73, song:'Running Out', artist:'HYBS',  day:true  },
-      { id:'night', t0:0.50, t1:1.00, src:'./audio/night-1.m4a', startAt:53, song:'ล้มเหลวเป็นตัวเอง', artist:'4EVE', day:false },
+      { id:'day',   t0:0.06, t1:0.60, src:'/Inside/audio/day-1.m4a',   startAt:73, song:'Running Out', artist:'HYBS',  day:true  },
+      { id:'night', t0:0.50, t1:1.00, src:'/Inside/audio/night-1.m4a', startAt:53, song:'ล้มเหลวเป็นตัวเอง', artist:'4EVE', day:false },
     ];
 
     const PL_ZONES = [
@@ -4404,11 +4404,13 @@
         plGainNight = plAudioCtx.createGain(); plGainNight.gain.value = 0;
         plAudioCtx.createMediaElementSource(plAudDay).connect(plGainDay).connect(plAudioCtx.destination);
         plAudioCtx.createMediaElementSource(plAudNight).connect(plGainNight).connect(plAudioCtx.destination);
-        plAudDay.src    = PL_TRACKS[0].src;
-        plAudNight.src  = PL_TRACKS[1].src;
+        plAudDay.src   = PL_TRACKS[0].src;
+        plAudNight.src = PL_TRACKS[1].src;
         plAudDay.preload   = 'none';
         plAudNight.preload = 'none';
-      } catch(e) {}
+      } catch (e) {
+        console.warn('She Listens audio init failed', e);
+      }
     }
 
     function plPlayTrack(trackId) {
@@ -4522,8 +4524,25 @@
       const track = PL_TRACKS.find(t => t.id === trackId);
       if (!track) return;
       const aud = trackId === 'day' ? plAudDay : plAudNight;
-      aud.currentTime = track.startAt;
-      aud.play().catch(() => {});
+
+      const playFromChorus = () => {
+        if (aud.readyState >= 1) {
+          aud.currentTime = track.startAt;
+        } else {
+          aud.addEventListener('loadedmetadata', () => { aud.currentTime = track.startAt; }, { once: true });
+        }
+        aud.play().catch((err) => console.warn('She Listens playback failed', trackId, err));
+      };
+
+      if (aud.readyState >= 2) {
+        playFromChorus();
+        return;
+      }
+
+      aud.preload = 'auto';
+      aud.addEventListener('canplay', playFromChorus, { once: true });
+      aud.addEventListener('error', () => console.warn('She Listens audio failed to load', trackId, aud.error), { once: true });
+      aud.load();
     }
 
     const plListenLink = document.getElementById('pl-listen-link');

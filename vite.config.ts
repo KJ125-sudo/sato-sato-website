@@ -46,7 +46,8 @@ function insidePasswordGate() {
         if (
           path === '/Inside/login' ||
           path === '/Inside/login.html' ||
-          path === '/api/inside-login'
+          path === '/api/inside-login' ||
+          path.startsWith('/Inside/audio/')
         ) {
           next();
           return;

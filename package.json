@@ -6,7 +6,6 @@
   "scripts": {
     "dev": "vite",
     "sync:bible": "node scripts/sync-brand-bible.mjs",
-    "prebuild": "node scripts/sync-brand-bible.mjs",
     "build": "vite build && node scripts/ensure-images.mjs",
     "preview": "vite preview",
     "optimize:media": "node scripts/optimize-media.mjs"

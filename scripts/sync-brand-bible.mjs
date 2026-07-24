@@ -47,6 +47,8 @@ if (!existsSync(bibleRoot)) {
   process.exit(1);
 }
 
+console.warn('Syncing from codex pack — this overwrites public/Inside/*.html. Run only when intentional.');
+
 mkdirSync(outDir, { recursive: true });
 
 writePage(

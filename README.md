@@ -38,7 +38,7 @@ The strategy site from `sato-sato-codex-build-pack` is synced to `/Inside` (not 
 
 Set both in the Vercel project **Settings → Environment Variables**, then redeploy.
 
-`npm run sync:bible` (also runs on `prebuild`) copies `sato.html`, education, and campaigns into `public/Inside/`.
+`npm run sync:bible` copies `sato.html`, education, and campaigns into `public/Inside/`. **Run manually** when the codex pack changes — it is not part of `npm run build` (avoids overwriting deployed customisations).
 
 ## Sections
 

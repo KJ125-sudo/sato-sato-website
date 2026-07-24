@@ -3,6 +3,7 @@ import {
   COOKIE_NAME,
   isInsidePath,
   isInsidePublicPath,
+  isInsideStaticAsset,
   isValidSessionToken,
   parseCookies,
 } from './lib/inside-auth.js';
@@ -15,7 +16,7 @@ export default async function middleware(request) {
   const url = new URL(request.url);
   const { pathname } = url;
 
-  if (!isInsidePath(pathname) || isInsidePublicPath(pathname)) {
+  if (!isInsidePath(pathname) || isInsidePublicPath(pathname) || isInsideStaticAsset(pathname)) {
     return;
   }
 
