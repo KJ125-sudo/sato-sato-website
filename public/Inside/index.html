@@ -1928,6 +1928,7 @@
       position: absolute;
       top: 0; left: 0; right: 0;
       will-change: transform;
+      padding-bottom: 14vh;
     }
 
     #s7-head, #s-category-head, #s9-head, #s-ritual-head, #s-channels-head, #s-competitive-head {
@@ -2611,7 +2612,7 @@
     }
 
     /* ── Scroll driver ──────────────────────────────────────── */
-    #driver { height: 7705vh; }
+    #driver { height: 8055vh; }
 
     /* ── Mobile ─────────────────────────────────────────────── */
     @media (max-width: 760px) {
@@ -3479,7 +3480,7 @@
 
     // ── Scene definitions: NO overlap between end and next start ─
     // Each entry: { id, start, end, label, midpoint(auto) }
-    const MAX_P = 3.092; // full scroll progress at bottom of page
+    const MAX_P = 3.232; // full scroll progress at bottom of page
 
     const SCENES = [
       { id:'s0',          start:-0.05, end:0.100, label:'Arrival'       },
@@ -3508,14 +3509,14 @@
       { id:'s5h',          start:1.946, end:1.962, label:'Simple filter'  },
       { id:'s7',           start:1.970, end:2.174, label:'Occasions'      },
       { id:'s-category',   start:2.182, end:2.272, label:'Category'       },
-      { id:'s9',           start:2.280, end:2.410, label:'Messaging'      },
-      { id:'s8',           start:2.418, end:2.568, label:'The truth'      },
-      { id:'s-ritual',     start:2.576, end:2.666, label:'Serve'          },
-      { id:'s-channels',   start:2.674, end:2.764, label:'Channels'       },
-      { id:'s-competitive',start:2.772, end:2.902, label:'Competitive'    },
-      { id:'s10',          start:2.910, end:2.926, label:'The future'     },
-      { id:'s11',          start:2.934, end:3.004, label:'Accounts'       },
-      { id:'s12',          start:3.012, end:3.092, label:'Sato Sato'      },
+      { id:'s9',           start:2.280, end:2.510, label:'Messaging'      },
+      { id:'s8',           start:2.518, end:2.668, label:'The truth'      },
+      { id:'s-ritual',     start:2.676, end:2.806, label:'Serve'          },
+      { id:'s-channels',   start:2.814, end:2.904, label:'Channels'       },
+      { id:'s-competitive',start:2.912, end:3.042, label:'Competitive'    },
+      { id:'s10',          start:3.050, end:3.066, label:'The future'     },
+      { id:'s11',          start:3.074, end:3.144, label:'Accounts'       },
+      { id:'s12',          start:3.152, end:3.232, label:'Sato Sato'      },
     ];
     SCENES.forEach(s => { s.mid = (s.start + s.end) / 2; });
     const sceneByID = {};
@@ -3616,8 +3617,8 @@
       else if (p < 0.88) {                           sz=8;                al=0.07; }
       else if (p < 0.953){ const t=(p-0.88)/0.073;  sz=8+t*26;           al=0.07+t*0.07; }
       else if (p < 1.041){ const t=(p-0.953)/0.088; sz=34-t*18;          al=0.14-t*0.04; }
-      else if (p < 2.910){                          sz=16;               al=0.10; }
-      else               { const t=(p-2.910)/0.182; sz=16+t*t*66;        al=0.10+t*0.18; }
+      else if (p < 3.050){                          sz=16;               al=0.10; }
+      else               { const t=(p-3.050)/0.182; sz=16+t*t*66;        al=0.10+t*0.18; }
       return { sz: Math.max(4, Math.round(sz)), al: Math.max(0.04, Math.min(0.28, al)) };
     }
 
@@ -3675,21 +3676,21 @@
       { p:2.182, r:250, g:250, b:245 },   // s-category (cream)
       { p:2.272, r:250, g:250, b:245 },
       { p:2.280, r:250, g:250, b:245 },   // s9 Messaging (cream)
-      { p:2.410, r:250, g:250, b:245 },
-      { p:2.418, r:8,   g:15,  b:28  },   // s8 Truth (midnight)
-      { p:2.568, r:8,   g:15,  b:28  },
-      { p:2.576, r:250, g:250, b:245 },   // s-ritual (cream)
-      { p:2.666, r:250, g:250, b:245 },
-      { p:2.674, r:27,  g:63,  b:122 },   // s-channels (blue)
-      { p:2.764, r:27,  g:63,  b:122 },
-      { p:2.772, r:250, g:250, b:245 },   // s-competitive (cream)
-      { p:2.902, r:250, g:250, b:245 },
-      { p:2.910, r:8,   g:15,  b:28  },   // s10 Future (midnight)
-      { p:2.926, r:8,   g:15,  b:28  },
-      { p:2.934, r:250, g:250, b:245 },   // s11 Accounts (cream)
-      { p:3.004, r:250, g:250, b:245 },
-      { p:3.012, r:27,  g:63,  b:122 },   // s12 Coda (blue)
-      { p:3.092, r:27,  g:63,  b:122 },   // s12 Coda end
+      { p:2.510, r:250, g:250, b:245 },
+      { p:2.518, r:8,   g:15,  b:28  },   // s8 Truth (midnight)
+      { p:2.668, r:8,   g:15,  b:28  },
+      { p:2.676, r:250, g:250, b:245 },   // s-ritual (cream)
+      { p:2.806, r:250, g:250, b:245 },
+      { p:2.814, r:27,  g:63,  b:122 },   // s-channels (blue)
+      { p:2.904, r:27,  g:63,  b:122 },
+      { p:2.912, r:250, g:250, b:245 },   // s-competitive (cream)
+      { p:3.042, r:250, g:250, b:245 },
+      { p:3.050, r:8,   g:15,  b:28  },   // s10 Future (midnight)
+      { p:3.066, r:8,   g:15,  b:28  },
+      { p:3.074, r:250, g:250, b:245 },   // s11 Accounts (cream)
+      { p:3.144, r:250, g:250, b:245 },
+      { p:3.152, r:27,  g:63,  b:122 },   // s12 Coda (blue)
+      { p:3.232, r:27,  g:63,  b:122 },   // s12 Coda end
     ];
 
     function lerpBg(p) {
@@ -3713,7 +3714,7 @@
       let ri = Math.min(BLEND, duration * 0.18);
       let ro = Math.min(BLEND, duration * 0.18);
       // Keep a readable plateau on short scenes instead of fading almost immediately.
-      const minPlateau = duration * 0.52;
+      const minPlateau = duration * 0.58;
       if (duration - ri - ro < minPlateau) {
         const ramp = Math.max(0.004, (duration - minPlateau) / 2);
         ri = ramp;
@@ -3752,6 +3753,14 @@
       if (!inner) return;
       const maxShift = Math.max(0, inner.scrollHeight - window.innerHeight);
       inner.style.transform = `translateY(${-lp * maxShift}px)`;
+    }
+
+    // Finish inner scroll before scene fade-out; hold bottom content on screen.
+    function scrollInnerReadable(inner, lp, scrollEnd = 0.64) {
+      if (!inner) return;
+      const maxShift = Math.max(0, inner.scrollHeight - window.innerHeight);
+      const t = Math.min(1, lp / scrollEnd);
+      inner.style.transform = `translateY(${-t * maxShift}px)`;
     }
 
     // ── Target accounts data ─────────────────────────────────────
@@ -4622,7 +4631,7 @@
       p>0.08 && p<0.98 ? wmEl.classList.add('on') : wmEl.classList.remove('on');
 
       // body bg class (for nav colour flip)
-      const onCream = (p >= 0.876 && p <= 0.898) || (p >= 1.056 && p <= 1.128) || (p >= 1.358 && p <= 1.382) || (p >= 1.814 && p <= 1.830) || (p >= 2.182 && p <= 2.272) || (p >= 2.280 && p <= 2.410) || (p >= 2.576 && p <= 2.666) || (p >= 2.772 && p <= 2.902) || (p >= 2.934 && p <= 3.004);
+      const onCream = (p >= 0.876 && p <= 0.898) || (p >= 1.056 && p <= 1.128) || (p >= 1.358 && p <= 1.382) || (p >= 1.814 && p <= 1.830) || (p >= 2.182 && p <= 2.272) || (p >= 2.280 && p <= 2.510) || (p >= 2.676 && p <= 2.806) || (p >= 2.912 && p <= 3.042) || (p >= 3.074 && p <= 3.144);
       document.body.classList.toggle('bg-cream', onCream);
 
       // background colour
@@ -4968,7 +4977,7 @@
         document.querySelectorAll('.s9-item').forEach((el,i) => {
           el.classList.toggle('in', lp9 > 0.05 + i * 0.1);
         });
-        scrollInner(s9inner, lp9);
+        scrollInnerReadable(s9inner, lp9, 0.62);
       }
 
       // S8 truth inner scroll + parallax
@@ -4983,7 +4992,7 @@
       // S-ritual inner scroll
       const sRit = sceneByID['s-ritual'];
       const lpRit = Math.max(0, Math.min(1, (p - sRit.start) / (sRit.end - sRit.start)));
-      if (p >= sRit.start && p <= sRit.end) scrollInner(sRitualInner, lpRit);
+      if (p >= sRit.start && p <= sRit.end) scrollInnerReadable(sRitualInner, lpRit, 0.62);
 
       // S-channels inner scroll
       const sCh = sceneByID['s-channels'];
