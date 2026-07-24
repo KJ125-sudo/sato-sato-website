@@ -1420,9 +1420,9 @@
     }
 
     /* ═══════════════════════════════════════════════
-       S-SHE-EATS — bento gallery (warm)
+       S-SHE-EATS — bento gallery
     ═══════════════════════════════════════════════ */
-    #s-she-eats { background: #120800; overflow: hidden; }
+    #s-she-eats { background: var(--midnight); overflow: hidden; }
     #s5eats-bento {
       position: absolute;
       inset: 0;
@@ -1437,7 +1437,7 @@
       position: relative;
       overflow: hidden;
       border-radius: 12px;
-      background: #2a1408;
+      background: var(--mid);
       translate: 35%;
       scale: 0.5;
     }
@@ -2580,19 +2580,19 @@
     #s12-thai {
       font-family: 'Playfair Display', serif;
       font-weight: 900;
-      font-size: clamp(18vw, 25vw, 34vw);
-      line-height: 0.74;
+      font-size: clamp(72px, 14vw, 160px);
+      line-height: 0.9;
       color: var(--cream);
-      letter-spacing: -4px;
+      letter-spacing: -2px;
     }
 
     #s12-en {
-      font-family: 'DM Mono', monospace;
-      font-size: 10px;
-      letter-spacing: 7px;
-      text-transform: uppercase;
-      color: rgba(250,250,245,0.25);
-      margin-top: 3rem;
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 300;
+      font-size: clamp(14px, 2vw, 20px);
+      letter-spacing: 0.4px;
+      color: rgba(250,250,245,0.55);
+      margin-top: 2rem;
     }
 
     /* ── Scroll driver ──────────────────────────────────────── */
@@ -3447,8 +3447,8 @@
     <!-- S12: CODA -->
     <section class="scene" id="s12" aria-label="Coda">
       <div id="s12-rule"></div>
-      <div id="s12-thai" aria-label="Sato Sato">สาโท<br>สาโท</div>
-      <div id="s12-en">Thailand's drink. Arrived now.</div>
+      <div id="s12-thai" aria-label="Sato Sato">Sato<br>Sato</div>
+      <div id="s12-en">Traditional Sato. Made Modern</div>
     </section>
 
   </div><!-- /overlay -->
@@ -3497,7 +3497,7 @@
       { id:'s-competitive',start:2.772, end:2.902, label:'Competitive'    },
       { id:'s10',          start:2.910, end:2.926, label:'The future'     },
       { id:'s11',          start:2.934, end:3.004, label:'Accounts'       },
-      { id:'s12',          start:3.012, end:3.092, label:'สาโท สาโท'     },
+      { id:'s12',          start:3.012, end:3.092, label:'Sato Sato'      },
     ];
     SCENES.forEach(s => { s.mid = (s.start + s.end) / 2; });
     const sceneByID = {};
@@ -3597,8 +3597,8 @@
       { p:1.048, r:13,  g:28,  b:53  },
       { p:1.056, r:250, g:250, b:245 },   // s5b she drinks (cream)
       { p:1.128, r:250, g:250, b:245 },
-      { p:1.136, r:18,  g:8,   b:0   },   // s-she-eats (warm dark)
-      { p:1.208, r:18,  g:8,   b:0   },
+      { p:1.136, r:8,   g:15,  b:28  },   // s-she-eats (midnight)
+      { p:1.208, r:8,   g:15,  b:28  },
       { p:1.216, r:8,   g:15,  b:28  },   // s-she-rates-intro (dark)
       { p:1.252, r:8,   g:15,  b:28  },
       { p:1.260, r:8,   g:15,  b:28  },   // s-she-rates grid (dark)
@@ -4133,7 +4133,7 @@
         angle:      angle,
         speed:      0.6 + Math.random() * 1.2,
         opacity:    0.12 + Math.random() * 0.16,
-        hue:        35  + Math.random() * 23,   // golden-amber: warm against light blue bg
+        hue:        210 + Math.random() * 18,   // brand blue light beams
         pulse:      Math.random() * Math.PI * 2,
         pulseSpeed: 0.02 + Math.random() * 0.03,
       };
@@ -4146,7 +4146,7 @@
       beam.x       = col * spacing + spacing / 2 + (Math.random() - 0.5) * spacing * 0.5;
       beam.width   = 100 + Math.random() * 100;
       beam.speed   = 0.5 + Math.random() * 0.4;
-      beam.hue     = 35  + (index * 23) / total;
+      beam.hue     = 210 + (index * 18) / total;
       beam.opacity = 0.2 + Math.random() * 0.1;
       return beam;
     }
