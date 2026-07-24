@@ -1,3 +1,18 @@
 {
-  "rewrites": [{ "source": "/(.*)", "destination": "/$1" }]
+  "rewrites": [
+    { "source": "/Inside", "destination": "/Inside/index.html" },
+    { "source": "/Inside/", "destination": "/Inside/index.html" },
+    { "source": "/Inside/login", "destination": "/Inside/login.html" },
+    { "source": "/Inside/education", "destination": "/Inside/education.html" },
+    { "source": "/Inside/campaigns", "destination": "/Inside/campaigns.html" }
+  ],
+  "headers": [
+    {
+      "source": "/Inside/(.*)",
+      "headers": [
+        { "key": "X-Robots-Tag", "value": "noindex, nofollow, noarchive" },
+        { "key": "Cache-Control", "value": "private, no-store" }
+      ]
+    }
+  ]
 }
