@@ -2,7 +2,7 @@ export const FLAVOURS = [
   {
     id: 'original',
     name: 'Original',
-    image: '/images/can-range-original.png',
+    image: '/images/can-range-original.webp',
     productImage: '/images/redesign/product-card-original.webp',
     accent: '#fafaf5',
     accentB: '#c8d4f0',
@@ -12,7 +12,7 @@ export const FLAVOURS = [
   {
     id: 'lime',
     name: 'Lime',
-    image: '/images/can-range-lime.png',
+    image: '/images/can-range-lime.webp',
     productImage: '/images/redesign/product-card-lime.webp',
     accent: '#9fd8a8',
     accentB: '#fafaf5',
@@ -22,7 +22,7 @@ export const FLAVOURS = [
   {
     id: 'cantaloupe',
     name: 'Cantaloupe',
-    image: '/images/can-range-cantaloupe.png',
+    image: '/images/can-range-cantaloupe.webp',
     productImage: '/images/redesign/product-card-cantaloupe.webp',
     accent: '#f0c888',
     accentB: '#fafaf5',
@@ -32,7 +32,7 @@ export const FLAVOURS = [
   {
     id: 'krajiab',
     name: 'Krajiab',
-    image: '/images/can-range-krajiab.png',
+    image: '/images/can-range-krajiab.webp',
     productImage: '/images/redesign/product-card-krajiab.webp',
     accent: '#fafaf5',
     accentB: '#9fd8a8',
