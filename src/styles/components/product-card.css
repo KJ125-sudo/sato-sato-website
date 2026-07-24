@@ -1,0 +1,121 @@
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--grid-gap);
+}
+
+.product-card {
+  position: relative;
+  border-radius: var(--radius-bento);
+  overflow: hidden;
+  min-height: clamp(420px, 50vw, 520px);
+  background: linear-gradient(135deg, var(--product-accent-a) 50%, var(--product-accent-b) 50%);
+}
+
+.product-card__stage {
+  position: relative;
+  height: 100%;
+  min-height: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: clamp(32px, 6vw, 64px) clamp(20px, 4vw, 32px) clamp(100px, 14vw, 120px);
+}
+
+.product-card__can-wrap {
+  position: relative;
+  width: clamp(140px, 28vw, 220px);
+  z-index: 2;
+}
+
+.product-card__can {
+  width: 100%;
+  filter: drop-shadow(0 24px 48px rgba(8, 15, 28, 0.22));
+  transition: transform 0.4s var(--ease);
+}
+
+.product-card:hover .product-card__can {
+  transform: translateY(-8px) scale(1.02);
+}
+
+.product-card__info {
+  position: absolute;
+  left: var(--spacing-16);
+  right: var(--spacing-16);
+  bottom: var(--spacing-16);
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-12);
+  padding: var(--spacing-16);
+  background: var(--color-cream);
+  border-radius: 16px;
+  color: var(--color-text-dark);
+  box-shadow: 0 8px 32px rgba(8, 15, 28, 0.12);
+}
+
+.product-card__thumb {
+  width: 48px;
+  height: 48px;
+  border-radius: 10px;
+  object-fit: cover;
+  flex-shrink: 0;
+  background: var(--color-block-lavender);
+}
+
+.product-card__meta {
+  flex: 1;
+  min-width: 0;
+}
+
+.product-card__name {
+  font-family: var(--font-display);
+  font-size: var(--text-subheading);
+  letter-spacing: -0.02em;
+  text-transform: lowercase;
+  line-height: 1.1;
+}
+
+.product-card__desc {
+  font-size: var(--text-caption);
+  color: var(--color-text-dark-muted);
+  margin-top: 4px;
+  line-height: 1.3;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.product-card__price-col {
+  text-align: right;
+  flex-shrink: 0;
+}
+
+.product-card__badge {
+  font-family: var(--font-ui);
+  font-size: var(--text-caption);
+  letter-spacing: var(--tracking-caption);
+  text-transform: uppercase;
+  background: var(--color-midnight);
+  color: var(--color-cream);
+  padding: 4px 10px;
+  border-radius: var(--radius-pill);
+}
+
+@media (max-width: 900px) {
+  .product-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .product-card__info {
+    flex-wrap: wrap;
+  }
+
+  .product-card__price-col {
+    width: 100%;
+    text-align: left;
+  }
+}

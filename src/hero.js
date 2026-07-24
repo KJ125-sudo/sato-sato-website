@@ -1,58 +1,56 @@
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger.js';
-import { initVariableFontProximity } from './variable-font-proximity.js';
 import { canUseDesktopFx, prefersReducedMotion } from './utils.js';
 
 gsap.registerPlugin(ScrollTrigger);
 
 export function initHero() {
   const section = document.getElementById('hero');
-  const can = document.getElementById('hero-can');
-  const canStage = document.getElementById('hero-can-stage');
-  const watermark = document.querySelector('.watermark');
+  const wordmark = document.getElementById('hero-wordmark');
+  const cloudsInner = document.getElementById('hero-clouds-inner');
+  const landscape = document.getElementById('hero-landscape');
 
   if (!section) return;
 
-  const headline = document.getElementById('hero-headline');
-  const typeContainer = section.querySelector('.hero__type');
-
-  if (headline && typeContainer) {
-    initVariableFontProximity(headline, {
-      container: typeContainer,
-      fromWeight: 900,
-      toWeight: 900,
-      fromScale: 1,
-      toScale: 1.045,
-      radius: 120,
-    });
-  }
-
-  const lines = section.querySelectorAll('.hero__line');
-
   if (!prefersReducedMotion()) {
-    gsap.set(lines, { y: 28, opacity: 0 });
-    gsap.set(can, { y: 40, opacity: 0, scale: 0.94 });
+    if (wordmark) {
+      gsap.fromTo(wordmark, { y: 24, opacity: 0 }, { y: 0, opacity: 1, duration: 0.85, ease: 'power3.out', delay: 0.15 });
+    }
 
-    gsap.timeline({ defaults: { ease: 'power3.out' } })
-      .to(lines, { y: 0, opacity: 1, duration: 0.75, stagger: 0.08 }, 0.1)
-      .to(can, { y: 0, opacity: 1, scale: 1, duration: 1, ease: 'power2.out' }, 0.45);
+    if (cloudsInner) {
+      gsap.to(cloudsInner, {
+        x: '-50%',
+        duration: 60,
+        repeat: -1,
+        ease: 'none',
+      });
+    }
+
+    if (landscape) {
+      ScrollTrigger.create({
+        trigger: section,
+        start: 'top top',
+        end: 'bottom top',
+        scrub: 0.8,
+        onUpdate: (self) => {
+          landscape.style.transform = `translateY(${self.progress * 20}px)`;
+        },
+      });
+    }
   }
 
-  if (can && canStage && canUseDesktopFx()) {
+  if (canUseDesktopFx() && !prefersReducedMotion() && wordmark) {
     let targetX = 0;
     let targetY = 0;
     let currentX = 0;
     let currentY = 0;
 
     section.addEventListener('mousemove', (e) => {
-      const rect = canStage.getBoundingClientRect();
-      const cx = rect.left + rect.width / 2;
-      const cy = rect.top + rect.height / 2;
-      // Normalised pointer offset — gentle 2D drift, no faux 3D rotation
-      const nx = (e.clientX - cx) / rect.width;
-      const ny = (e.clientY - cy) / rect.height;
-      targetX = nx * 18;
-      targetY = ny * 14;
+      const rect = section.getBoundingClientRect();
+      const nx = (e.clientX - rect.left) / rect.width - 0.5;
+      const ny = (e.clientY - rect.top) / rect.height - 0.5;
+      targetX = nx * 16;
+      targetY = ny * 10;
     });
 
     section.addEventListener('mouseleave', () => {
@@ -61,21 +59,9 @@ export function initHero() {
     });
 
     gsap.ticker.add(() => {
-      currentX += (targetX - currentX) * 0.07;
-      currentY += (targetY - currentY) * 0.07;
-      canStage.style.transform = `translate(${currentX}px, ${currentY}px)`;
-    });
-  }
-
-  if (watermark && !prefersReducedMotion()) {
-    ScrollTrigger.create({
-      trigger: section,
-      start: 'top top',
-      end: 'bottom top',
-      scrub: true,
-      onUpdate: (self) => {
-        watermark.style.backgroundPosition = `center ${self.progress * 120}px`;
-      },
+      currentX += (targetX - currentX) * 0.05;
+      currentY += (targetY - currentY) * 0.05;
+      wordmark.style.translate = `${currentX * 0.2}px ${currentY * 0.12}px`;
     });
   }
 }

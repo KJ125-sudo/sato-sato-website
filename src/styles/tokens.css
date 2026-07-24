@@ -1,5 +1,5 @@
 :root {
-  /* Sato palette (mapped from Hungry Tiger structure) */
+  /* Sato palette */
   --color-cream: #fafaf5;
   --color-blue: #1b3f7a;
   --color-blue-mid: #2d5fa6;
@@ -8,45 +8,56 @@
   --color-border: rgba(250, 250, 245, 0.18);
   --color-border-strong: rgba(250, 250, 245, 0.42);
   --color-cream-muted: rgba(250, 250, 245, 0.62);
+  --color-text-dark: var(--color-midnight);
+  --color-text-dark-muted: rgba(8, 15, 28, 0.62);
 
-  /* Flavour accents (range badges only) */
+  /* Block colors (Devil Up mapping) */
+  --color-block-cream: #fafaf5;
+  --color-block-blue: #2d5fa6;
+  --color-block-lavender: #c8d4f0;
+
+  /* Flavour accents */
   --color-lime: #9fd8a8;
   --color-cantaloupe: #f0c888;
   --color-krajiab: #e8a0b8;
 
   /* Typography families */
-  --font-display: 'Playfair Display', Georgia, serif;
+  --font-display: 'Archivo Black', 'Arial Black', sans-serif;
   --font-ui: 'DM Mono', ui-monospace, monospace;
   --font-body: 'DM Sans', system-ui, sans-serif;
 
-  /* Type scale (Refero structure, Sato fonts) */
+  /* Type scale */
   --text-caption: 11px;
   --leading-caption: 1.2;
-  --tracking-caption: 0.02em;
+  --tracking-caption: 0.04em;
 
   --text-ui: 13px;
   --leading-ui: 1.2;
-  --tracking-ui: 0.01em;
+  --tracking-ui: 0.02em;
 
   --text-subheading: 18px;
-  --leading-subheading: 1.2;
-  --tracking-subheading: 0.01em;
+  --leading-subheading: 1.15;
+  --tracking-subheading: -0.01em;
 
-  --text-heading-sm: clamp(24px, 4vw, 29px);
-  --leading-heading-sm: 1.1;
-  --tracking-heading-sm: -0.005em;
+  --text-heading-sm: clamp(24px, 4vw, 32px);
+  --leading-heading-sm: 1.05;
+  --tracking-heading-sm: -0.02em;
 
-  --text-heading: clamp(42px, 8vw, 65px);
+  --text-heading: clamp(36px, 7vw, 56px);
   --leading-heading: 0.95;
-  --tracking-heading: -0.01em;
+  --tracking-heading: -0.03em;
 
-  --text-heading-lg: clamp(56px, 11vw, 101px);
-  --leading-heading-lg: 0.9;
-  --tracking-heading-lg: -0.016em;
+  --text-heading-lg: clamp(48px, 9vw, 88px);
+  --leading-heading-lg: 0.92;
+  --tracking-heading-lg: -0.04em;
 
-  --text-display: clamp(72px, 14vw, 160px);
-  --leading-display: 0.82;
-  --tracking-display: -0.02em;
+  --text-display: clamp(56px, 12vw, 120px);
+  --leading-display: 0.88;
+  --tracking-display: -0.04em;
+
+  --text-mega: clamp(72px, 16vw, 160px);
+  --leading-mega: 0.85;
+  --tracking-mega: -0.05em;
 
   /* Spacing */
   --spacing-4: 4px;
@@ -59,21 +70,27 @@
   --spacing-24: 24px;
   --spacing-32: 32px;
   --spacing-42: 42px;
+  --spacing-48: 48px;
+  --spacing-64: 64px;
   --spacing-80: 80px;
   --spacing-120: 120px;
 
   /* Layout */
   --page-max-width: 1440px;
-  --section-gap: clamp(80px, 12vh, 120px);
-  --nav-h: 104px;
+  --section-gap: clamp(64px, 10vh, 96px);
+  --nav-h: 88px;
+  --grid-gap: 12px;
   --ease: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-bounce: cubic-bezier(0.34, 1.56, 0.64, 1);
 
   /* Radii */
   --radius-card: 6px;
+  --radius-bento: 20px;
   --radius-pill: 9999px;
 
   /* Surfaces */
   --surface-canvas: var(--color-blue);
   --surface-card: var(--color-night);
   --surface-deep: var(--color-midnight);
+  --surface-light: var(--color-block-lavender);
 }

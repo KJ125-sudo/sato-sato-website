@@ -1,0 +1,127 @@
+.section--find {
+  background: var(--surface-deep);
+}
+
+.find-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: var(--spacing-32);
+  margin-bottom: clamp(40px, 8vh, 64px);
+}
+
+.find-contact {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-8);
+  text-align: right;
+}
+
+.find-contact a {
+  font-family: var(--font-ui);
+  font-size: var(--text-ui);
+  color: var(--color-cream);
+  border-bottom: 1px dotted var(--color-border-strong);
+  padding-bottom: 2px;
+}
+
+.find-contact span {
+  font-size: var(--text-caption);
+  color: var(--color-cream-muted);
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-caption);
+}
+
+.venues {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--grid-gap);
+}
+
+.venue {
+  display: flex;
+  flex-direction: column;
+  background: var(--surface-card);
+  border-radius: var(--radius-bento);
+  padding: var(--spacing-20);
+  border: 1px solid var(--color-border);
+  opacity: 0;
+  min-height: 140px;
+  transition: transform 0.25s var(--ease), border-color 0.25s var(--ease);
+}
+
+.venue.is-visible {
+  opacity: 1;
+}
+
+.venue:hover {
+  transform: translateY(-2px);
+  border-color: var(--color-border-strong);
+}
+
+.venue__name {
+  font-family: var(--font-display);
+  font-size: var(--text-subheading);
+  color: var(--color-cream);
+  margin-bottom: var(--spacing-4);
+  text-transform: lowercase;
+  letter-spacing: -0.02em;
+}
+
+.venue__type {
+  font-family: var(--font-ui);
+  font-size: var(--text-caption);
+  letter-spacing: var(--tracking-caption);
+  text-transform: uppercase;
+  color: var(--color-cream-muted);
+}
+
+.venue__links {
+  display: flex;
+  gap: var(--spacing-10);
+  margin-top: auto;
+  padding-top: var(--spacing-16);
+}
+
+.venue__link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-cream-muted);
+  transition: color 0.2s var(--ease);
+}
+
+.venue__link:hover {
+  color: var(--color-cream);
+}
+
+.venue__link svg {
+  display: block;
+}
+
+@media (max-width: 900px) {
+  .find-head {
+    flex-direction: column;
+  }
+
+  .find-contact {
+    text-align: left;
+  }
+
+  .venues {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 520px) {
+  .venues {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .venue {
+    opacity: 1;
+    transition: none;
+  }
+}

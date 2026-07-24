@@ -366,16 +366,17 @@
     #s3-veil {
       position: absolute;
       inset: 0;
-      background: linear-gradient(to right, rgba(18,38,70,0.88) 45%, rgba(18,38,70,0.1) 100%);
+      background: linear-gradient(to right, rgba(8,15,28,0.92) 42%, rgba(18,38,70,0.55) 72%, rgba(18,38,70,0.2) 100%);
     }
 
     #s3-copy {
       position: absolute;
       bottom: 12vh; left: 13vw;
       max-width: min(680px, 80vw);
+      text-shadow: 0 2px 24px rgba(8, 15, 28, 0.55);
     }
 
-    #s3-copy .t-label { color: rgba(250,250,245,0.2); margin-bottom: 1.5rem; }
+    #s3-copy .t-label { color: rgba(250,250,245,0.48); margin-bottom: 1.5rem; }
 
     #s3-head {
       font-family: 'Playfair Display', serif;
@@ -387,17 +388,17 @@
       margin-bottom: 1.5rem;
     }
 
-    #s3-body { color: rgba(250,250,245,0.45); max-width: 560px; }
+    #s3-body { color: rgba(250,250,245,0.78); max-width: 560px; }
 
     #s3-pull {
       margin-top: 1.5rem;
-      border-left: 1px solid rgba(250,250,245,0.12);
+      border-left: 1px solid rgba(250,250,245,0.22);
       padding-left: 1.2rem;
       font-family: 'DM Mono', monospace;
       font-size: 11px;
       letter-spacing: 1px;
       line-height: 1.7;
-      color: rgba(250,250,245,0.22);
+      color: rgba(250,250,245,0.58);
       max-width: 480px;
     }
 
@@ -496,7 +497,7 @@
       transition: opacity 0.7s cubic-bezier(0.16,1,0.3,1), transform 0.7s cubic-bezier(0.16,1,0.3,1);
     }
     .sm-is-head  { transform: translateX(-50px); }
-    .sm-not-head { transform: translateX(50px); color: rgba(250,250,245,0.35); }
+    .sm-not-head { transform: translateX(50px); color: rgba(250,250,245,0.58); }
     .sm-section-head.in { opacity: 1; transform: translateX(0); }
 
     .sm-dot {
@@ -552,7 +553,7 @@
       font-weight: 400;
       font-size: clamp(12px, 1.3vw, 17px);
       line-height: 1.35;
-      color: rgba(250,250,245,0.28);
+      color: rgba(250,250,245,0.52);
       margin-bottom: 0.5rem;
       opacity: 0;
       transform: translateX(40px);
@@ -811,7 +812,7 @@
       font-weight: 400;
       font-size: clamp(16px, 1.9vw, 26px);
       line-height: 1.68;
-      color: rgba(250,250,245,0.48);
+      color: rgba(250,250,245,0.72);
       margin-bottom: 2.4rem;
       opacity: 0;
       transform: translateX(-28px);
@@ -819,7 +820,7 @@
     }
     .sw2-para:last-child { margin-bottom: 0; }
     .sw2-para.in { opacity: 1; transform: translateX(0); }
-    #sw2-p2 { color: rgba(250,250,245,0.75); }
+    #sw2-p2 { color: rgba(250,250,245,0.92); }
 
     /* ═══════════════════════════════════════════════
        S-WHO-3 — THE CLAIM
@@ -1812,8 +1813,8 @@
       gap: 2px;
     }
     .s5g-block {
-      background: rgba(255,255,255,0.04);
-      border: 1px solid rgba(255,255,255,0.07);
+      background: rgba(255,255,255,0.07);
+      border: 1px solid rgba(255,255,255,0.14);
       padding: 28px 32px;
       opacity: 0;
       transition: opacity 0.5s ease;
@@ -1826,15 +1827,15 @@
       font-size: 9px;
       letter-spacing: 4px;
       text-transform: uppercase;
-      color: rgba(255,255,255,0.3);
+      color: rgba(255,255,255,0.58);
       margin-bottom: 18px;
     }
     .s5g-item {
       font-family: 'DM Sans', sans-serif;
       font-size: 13px;
-      color: rgba(255,255,255,0.3);
+      color: rgba(255,255,255,0.62);
       text-decoration: line-through;
-      text-decoration-color: rgba(255,255,255,0.18);
+      text-decoration-color: rgba(255,255,255,0.35);
       line-height: 1.7;
       padding: 6px 0;
       border-bottom: 1px solid rgba(255,255,255,0.05);
@@ -1885,38 +1886,6 @@
     .s5h-w.in { opacity: 1; transform: none; }
 
     /* ═══════════════════════════════════════════════
-       S6 — WAIT.
-    ═══════════════════════════════════════════════ */
-    #s6 {
-      background: var(--midnight);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-    }
-
-    #s6-wait {
-      font-family: 'Playfair Display', serif;
-      font-weight: 900;
-      font-size: clamp(110px, 23vw, 32vw);
-      line-height: 0.78;
-      color: var(--cream);
-      letter-spacing: -6px;
-    }
-
-    #s6-rest {
-      font-family: 'Playfair Display', serif;
-      font-style: italic;
-      font-weight: 400;
-      font-size: clamp(22px, 3.5vw, 50px);
-      color: rgba(250,250,245,0.38);
-      letter-spacing: -1px;
-      margin-top: 2rem;
-      max-width: 680px;
-    }
-
-    /* ═══════════════════════════════════════════════
        S7 — OCCASIONS
     ═══════════════════════════════════════════════ */
     #s7 { background: var(--blue); }
@@ -1935,9 +1904,9 @@
       position: absolute;
       inset: 0;
       background: linear-gradient(135deg,
-        rgba(27,63,122,0.88) 0%,
-        rgba(27,63,122,0.55) 55%,
-        rgba(27,63,122,0.2) 100%);
+        rgba(8,15,28,0.82) 0%,
+        rgba(27,63,122,0.72) 50%,
+        rgba(27,63,122,0.35) 100%);
     }
 
     #s7-inner, #s-category-inner, #s9-inner, #s8-inner, #s-ritual-inner, #s-channels-inner, #s-competitive-inner {
@@ -1953,7 +1922,7 @@
     }
 
     #s7-head .t-label, #s-category-head .t-label, #s9-head .t-label, #s-ritual-head .t-label, #s-channels-head .t-label, #s-competitive-head .t-label {
-      color: rgba(250,250,245,0.2);
+      color: rgba(250,250,245,0.45);
       margin-bottom: 1rem;
     }
 
@@ -1965,6 +1934,7 @@
       letter-spacing: -2px;
       color: var(--cream);
       margin-bottom: 1rem;
+      text-shadow: 0 2px 28px rgba(8, 15, 28, 0.42);
     }
 
     #s7-lead, #s-category-lead, #s9-lead, #s-ritual-lead, #s-channels-lead, #s-competitive-lead,
@@ -1972,14 +1942,14 @@
       font-family: 'Playfair Display', serif;
       font-size: clamp(14px, 1.6vw, 20px);
       line-height: 1.55;
-      color: rgba(250,250,245,0.55);
+      color: rgba(250,250,245,0.72);
       max-width: 720px;
       margin-bottom: 0.75rem;
     }
 
     #s7-pull, #s-category-frame, #s9-master, #s-channels-rule, #s-competitive-pull, #s-ritual-line {
       font-style: italic;
-      color: rgba(250,250,245,0.72);
+      color: rgba(250,250,245,0.88);
     }
 
     #s7-grid {
@@ -2018,7 +1988,7 @@
       font-family: 'DM Sans', sans-serif;
       font-size: 13px;
       line-height: 1.55;
-      color: rgba(250,250,245,0.55);
+      color: rgba(250,250,245,0.72);
     }
 
     .s7-card-list { list-style: none; margin-top: 0.5rem; }
@@ -2122,7 +2092,7 @@
     #s8-veil {
       position: absolute;
       inset: 0;
-      background: linear-gradient(to bottom, transparent 0%, var(--midnight) 72%);
+      background: linear-gradient(to bottom, rgba(8,15,28,0.35) 0%, rgba(8,15,28,0.88) 55%, var(--midnight) 78%);
     }
 
     #s8-inner {
@@ -2130,16 +2100,17 @@
       max-width: 820px;
       margin: 0 auto;
       text-align: center;
+      text-shadow: 0 2px 20px rgba(8, 15, 28, 0.45);
     }
 
-    #s8-inner .t-label { color: rgba(250,250,245,0.16); margin-bottom: 1.8rem; display: block; }
+    #s8-inner .t-label { color: rgba(250,250,245,0.48); margin-bottom: 1.8rem; display: block; }
 
     #s8-quote {
       font-family: 'Playfair Display', serif;
       font-style: italic;
       font-size: clamp(18px, 2.4vw, 32px);
       line-height: 1.4;
-      color: rgba(250,250,245,0.78);
+      color: rgba(250,250,245,0.92);
       margin-bottom: 1.5rem;
     }
 
@@ -2147,7 +2118,7 @@
       font-family: 'DM Sans', sans-serif;
       font-size: 14px;
       line-height: 1.75;
-      color: rgba(250,250,245,0.55);
+      color: rgba(250,250,245,0.78);
       margin-bottom: 1rem;
       text-align: left;
     }
@@ -2164,7 +2135,7 @@
       font-size: 9px;
       letter-spacing: 3px;
       text-transform: uppercase;
-      color: rgba(250,250,245,0.3);
+      color: rgba(250,250,245,0.52);
       margin-bottom: 0.75rem;
     }
 
@@ -2625,7 +2596,7 @@
     }
 
     /* ── Scroll driver ──────────────────────────────────────── */
-    #driver { height: 7317vh; }
+    #driver { height: 7705vh; }
 
     /* ── Mobile ─────────────────────────────────────────────── */
     @media (max-width: 760px) {
@@ -2679,22 +2650,58 @@
       display: flex; flex-direction: column;
       align-items: center; justify-content: center;
       text-align: center; padding: 0 48px;
-      transition: opacity 0.5s ease;
+      z-index: 5;
+      pointer-events: none;
+      transition: opacity 0.6s ease;
     }
-    #pl-open-label {
-      display: block; font-family: 'DM Sans', sans-serif;
-      font-weight: 700; font-size: 10px; letter-spacing: 4px;
-      text-transform: uppercase; color: #1B3F7A; opacity: 0.4;
-      margin-bottom: 20px;
+    #pl-open::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse 55% 45% at 50% 50%, rgba(8, 20, 40, 0.42) 0%, transparent 72%);
+      z-index: -1;
     }
     #pl-open-title {
-      font-family: 'Playfair Display', serif; font-weight: 900;
-      font-size: clamp(48px, 7vw, 80px); color: #1B3F7A;
-      line-height: 0.95; letter-spacing: -2px; margin: 0 0 24px;
+      font-family: 'Playfair Display', serif; font-weight: 700;
+      font-size: clamp(36px, 5.5vw, 72px);
+      color: #FAFAF5;
+      line-height: 1.08; letter-spacing: -1px; margin: 0 0 20px;
+      text-shadow: 0 2px 28px rgba(8, 20, 40, 0.45);
     }
     #pl-open-sub {
       font-family: 'DM Sans', sans-serif; font-weight: 300;
-      font-size: 16px; color: rgba(13,28,53,0.55); margin: 0;
+      font-size: 15px; color: rgba(250, 250, 245, 0.72); margin: 0 0 28px;
+      letter-spacing: 0.3px;
+    }
+
+    #pl-intro-play-wrap {
+      display: flex; flex-direction: column; align-items: center; gap: 14px;
+      pointer-events: auto;
+      transition: opacity 0.4s ease;
+    }
+    #pl-intro-play {
+      width: 56px; height: 56px; background: #FAFAF5;
+      border: none; border-radius: 50%; cursor: pointer;
+      display: flex; align-items: center; justify-content: center;
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+      animation: plIntroPulse 2.4s ease-in-out infinite;
+    }
+    #pl-intro-play:hover { transform: scale(1.06); }
+    #pl-intro-play.is-playing { animation: none; opacity: 0.85; }
+    .pl-intro-play-icon {
+      width: 0; height: 0; margin-left: 4px;
+      border-style: solid;
+      border-width: 9px 0 9px 16px;
+      border-color: transparent transparent transparent #1B3F7A;
+    }
+    #pl-intro-cta {
+      font-family: 'DM Sans', sans-serif; font-weight: 500;
+      font-size: 11px; letter-spacing: 3px; text-transform: uppercase;
+      color: rgba(250, 250, 245, 0.62);
+    }
+    @keyframes plIntroPulse {
+      0%, 100% { box-shadow: 0 0 0 0 rgba(250, 250, 245, 0.45); }
+      60%       { box-shadow: 0 0 0 14px rgba(250, 250, 245, 0); }
     }
 
     #pl-zone-text {
@@ -2724,25 +2731,6 @@
       opacity: 0; margin-top: 20px; transition: opacity 0.6s ease;
     }
 
-    #pl-close {
-      position: absolute; inset: 0;
-      display: flex; flex-direction: column;
-      align-items: center; justify-content: center;
-      text-align: center; padding: 0 10vw; pointer-events: none;
-      transition: opacity 0.6s ease;
-    }
-    #pl-close-quote {
-      font-family: 'Playfair Display', serif; font-weight: 400;
-      font-style: italic; font-size: clamp(18px, 2.5vw, 26px);
-      color: white; opacity: 0.7; max-width: 480px;
-      line-height: 1.65; margin: 0 0 20px;
-    }
-    #pl-close-sub {
-      font-family: 'DM Sans', sans-serif; font-weight: 300;
-      font-size: 13px; color: white; opacity: 0.35;
-      letter-spacing: 3px; text-transform: uppercase; margin: 0;
-    }
-
     #pl-images {
       position: absolute; inset: 0;
       pointer-events: none; overflow: hidden;
@@ -2761,92 +2749,6 @@
       50%       { margin-top: -8px; }
     }
     .pl-img.floating { animation: plFloat 5s ease-in-out infinite; }
-
-    /* ── Cassette widget ── */
-    #pl-cassette {
-      position: fixed; right: 32px; bottom: 32px;
-      z-index: 100; opacity: 0;
-      transition: opacity 0.6s ease;
-      display: flex; flex-direction: column; align-items: center;
-      pointer-events: none;
-    }
-    #pl-cassette.visible { opacity: 1; pointer-events: auto; }
-
-    #pl-day-night-pill {
-      font-family: 'DM Sans', sans-serif; font-size: 10px;
-      letter-spacing: 2px; text-transform: uppercase;
-      padding: 4px 10px; border-radius: 20px; margin-bottom: 10px;
-      background: rgba(255,200,50,0.2); border: 1px solid rgba(255,200,50,0.4);
-      color: rgba(255,200,50,0.9); transition: background 1s, border-color 1s, color 1s;
-    }
-    #pl-day-night-pill.night {
-      background: rgba(100,120,255,0.2); border-color: rgba(100,120,255,0.4);
-      color: rgba(150,170,255,0.9);
-    }
-
-    #pl-cassette-shell {
-      position: relative; width: 200px; height: 120px;
-      background: #1B3F7A; border-radius: 8px;
-      border: 2px solid rgba(255,255,255,0.15);
-    }
-    .pl-reel {
-      position: absolute; width: 36px; height: 36px;
-      border-radius: 50%; border: 2px solid rgba(255,255,255,0.3);
-      background: rgba(0,0,0,0.4); top: 38px;
-    }
-    .pl-reel::after {
-      content: ''; position: absolute; top: 50%; left: 50%;
-      transform: translate(-50%,-50%);
-      width: 8px; height: 8px; border-radius: 50%;
-      background: rgba(255,255,255,0.3);
-    }
-    #pl-reel-l { left: 40px; animation: plReelSpin 3s linear infinite; animation-play-state: paused; }
-    #pl-reel-r { right: 40px; animation: plReelSpin 4s linear infinite; animation-play-state: paused; }
-    @keyframes plReelSpin { from { transform:rotate(0deg); } to { transform:rotate(360deg); } }
-    #pl-cassette.playing #pl-reel-l,
-    #pl-cassette.playing #pl-reel-r { animation-play-state: running; }
-
-    #pl-tape-window {
-      position: absolute; width: 60px; height: 14px;
-      background: rgba(0,0,0,0.5); border-radius: 2px;
-      bottom: 24px; left: 50%; transform: translateX(-50%);
-    }
-    #pl-cassette-label {
-      position: absolute; top: 38%; left: 50%;
-      transform: translate(-50%, -50%); text-align: center;
-      font-family: 'DM Sans', sans-serif; font-size: 9px;
-      font-weight: 700; letter-spacing: 2px; text-transform: uppercase;
-      color: rgba(255,255,255,0.7); line-height: 1.6; pointer-events: none;
-    }
-
-    #pl-play-btn {
-      width: 40px; height: 40px; background: white;
-      border-radius: 50%; border: none; cursor: pointer;
-      margin-top: 12px; display: flex; align-items: center;
-      justify-content: center; transition: transform 0.15s;
-    }
-    #pl-play-btn:hover { transform: scale(1.08); }
-    .pl-btn-icon { display: block; }
-    .pl-btn-play  { width: 0; height: 0; border-style: solid;
-      border-width: 7px 0 7px 13px; margin-left: 2px;
-      border-color: transparent transparent transparent #1B3F7A; }
-    .pl-btn-pause { display: flex; gap: 3px; }
-    .pl-btn-pause span { display:block; width:4px; height:14px; background:#1B3F7A; border-radius:1px; }
-
-    #pl-now-playing { text-align: center; margin-top: 8px; }
-    #pl-np-track, #pl-np-artist {
-      display: block; font-family: 'DM Sans', sans-serif;
-      font-size: 11px; color: white; letter-spacing: 1px;
-      line-height: 1.6; transition: opacity 0.5s ease; max-width: 180px;
-    }
-    #pl-np-track  { font-weight: 500; opacity: 0.85; }
-    #pl-np-artist { opacity: 0.55; }
-
-    @keyframes plPulse {
-      0%, 100% { box-shadow: 0 0 0 0 rgba(255,255,255,0.5); }
-      60%       { box-shadow: 0 0 0 10px rgba(255,255,255,0); }
-    }
-    #pl-cassette:not(.active) #pl-play-btn { animation: plPulse 2s ease-in-out infinite; }
 
     .pl-listen-link {
       font-family: 'DM Sans', sans-serif; font-size: 15px;
@@ -2871,7 +2773,7 @@
     }
     /* Lift text and image overlays above canvas layers */
     #pl-images    { z-index: 2; }
-    #pl-open, #pl-zone-text, #pl-close { z-index: 3; }
+    #pl-open, #pl-zone-text { z-index: 3; }
 
   </style>
   <script src="https://cdn.jsdelivr.net/npm/three@0.158.0/build/three.min.js"></script>
@@ -3182,19 +3084,20 @@
       <canvas id="pl-atmosphere"></canvas>
       <div id="pl-three-container"></div>
       <div id="pl-open">
-        <span id="pl-open-label">She listened to</span>
-        <h2 id="pl-open-title">Praew's World</h2>
+        <h2 id="pl-open-title">She<br>Listens To</h2>
         <p id="pl-open-sub">A day in music. 15 artists. Day into night.</p>
+        <div id="pl-intro-play-wrap">
+          <button id="pl-intro-play" type="button" aria-label="Play">
+            <span class="pl-intro-play-icon" aria-hidden="true"></span>
+          </button>
+          <span id="pl-intro-cta">Press play</span>
+        </div>
       </div>
       <div id="pl-zone-text" class="day">
         <span id="pl-zone-label"></span>
         <div id="pl-zone-song"></div>
         <div id="pl-zone-artist"></div>
         <span id="pl-scroll-cue">scroll to move through her day ↓</span>
-      </div>
-      <div id="pl-close">
-        <p id="pl-close-quote">"She leaves work late, walks fast with Spotify on, sends the 'where are we actually going?' voice note, then ends up at moo krata with friends before a small Thonglor bar."</p>
-        <p id="pl-close-sub">Not club chaos. Good table energy.</p>
       </div>
       <div id="pl-images"></div>
     </section>
@@ -3297,12 +3200,6 @@
         <span id="s5h-kicker">The simple filter</span>
         <p id="s5h-quote"><span class="s5h-w">Does</span> <span class="s5h-w">this</span> <span class="s5h-w">feel</span> <span class="s5h-w">like</span> <span class="s5h-w">Ari,</span> <span class="s5h-w">Charoenkrung,</span> <span class="s5h-w">Thonglor,</span> <span class="s5h-w">or</span> <span class="s5h-w">Banthat</span> <span class="s5h-w">Thong</span> <span class="s5h-w">Bangkok?</span> <span class="s5h-w">Or</span> <span class="s5h-w">does</span> <span class="s5h-w">it</span> <span class="s5h-w">feel</span> <span class="s5h-w">like</span> <span class="s5h-w">Khao</span> <span class="s5h-w">San,</span> <span class="s5h-w">airport</span> <span class="s5h-w">souvenir,</span> <span class="s5h-w">hotel</span> <span class="s5h-w">Thai</span> <span class="s5h-w">night,</span> <span class="s5h-w">or</span> <span class="s5h-w">expat</span> <span class="s5h-w">pub</span> <span class="s5h-w">Bangkok?</span></p>
       </div>
-    </section>
-
-    <!-- S6: WAIT. -->
-    <section class="scene" id="s6" aria-label="The discovery moment">
-      <p id="s6-wait">Wait.</p>
-      <p id="s6-rest">"This is actually sato?"</p>
     </section>
 
     <!-- S7: OCCASIONS -->
@@ -3556,25 +3453,6 @@
 
   </div><!-- /overlay -->
 
-  <!-- PraewListens cassette widget ───────────────────────────────── -->
-  <div id="pl-cassette">
-    <div id="pl-day-night-pill">☀ DAY</div>
-    <div id="pl-cassette-shell">
-      <div class="pl-reel" id="pl-reel-l"></div>
-      <div class="pl-reel" id="pl-reel-r"></div>
-      <div id="pl-tape-window"></div>
-      <div id="pl-cassette-label">PRAEW'S<br>WORLD</div>
-    </div>
-    <button id="pl-play-btn" aria-label="Play / pause">
-      <span class="pl-btn-icon pl-btn-play" id="pl-icon-play"></span>
-      <span class="pl-btn-icon pl-btn-pause" id="pl-icon-pause" style="display:none"><span></span><span></span></span>
-    </button>
-    <div id="pl-now-playing">
-      <span id="pl-np-track"></span>
-      <span id="pl-np-artist"></span>
-    </div>
-  </div>
-
   <div id="driver" aria-hidden="true"></div>
 
   <script>
@@ -3583,50 +3461,49 @@
 
     // ── Scene definitions: NO overlap between end and next start ─
     // Each entry: { id, start, end, label, midpoint(auto) }
-    const MAX_P = 2.937; // full scroll progress at bottom of page
+    const MAX_P = 3.092; // full scroll progress at bottom of page
 
     const SCENES = [
       { id:'s0',          start:-0.05, end:0.100, label:'Arrival'       },
       { id:'s1',          start:0.112, end:0.215, label:'Why it exists'  },
       { id:'s2',          start:0.227, end:0.355, label:'The statement'  },
-      { id:'s3',          start:0.367, end:0.455, label:'The drink'      },
-      { id:'s-bubbles',   start:0.460, end:0.500, label:'Sato Sato Is'   },
-      { id:'s-manifesto', start:0.505, end:0.620, label:'It is'          },
-      { id:'s4',          start:0.630, end:0.690, label:'The can'        },
-      { id:'s-who-1',     start:0.700, end:0.722, label:"Who it's for"   },
-      { id:'s-who-2',     start:0.730, end:0.752, label:'The portrait'   },
-      { id:'s-who-3',     start:0.760, end:0.782, label:'The claim'      },
-      { id:'s5a',         start:0.790, end:0.870, label:'Praew'           },
-      { id:'s-praew-1',   start:0.878, end:0.945, label:'Believer'        },
-      { id:'s5b',         start:0.953, end:1.033, label:'She drinks'      },
-      { id:'s-she-eats',  start:1.041, end:1.121, label:'She eats'        },
-      { id:'s-she-rates-intro',start:1.129,end:1.169, label:'She rates'   },
-      { id:'s-she-rates',  start:1.177, end:1.277, label:'She rates grid' },
-      { id:'s-who-4d',    start:1.285, end:1.313, label:'Brands'          },
-      { id:'pl-section',  start:1.321, end:1.521, label:'She listened to' },
-      { id:'s-friday-night',start:1.529,end:1.639, label:'Friday night'   },
-      { id:'s-praew-3',   start:1.647, end:1.727, label:'The moment'      },
-      { id:'s5e',          start:1.735, end:1.755, label:'Decision filter'},
-      { id:'s5f',          start:1.763, end:1.783, label:'Mirror'         },
-      { id:'s5g',          start:1.791, end:1.819, label:'Wrong world'    },
-      { id:'s5h',          start:1.827, end:1.847, label:'Simple filter'  },
-      { id:'s6',           start:1.855, end:1.875, label:'Wait.'          },
-      { id:'s7',           start:1.883, end:2.003, label:'Occasions'      },
-      { id:'s-category',   start:2.011, end:2.111, label:'Category'       },
-      { id:'s9',           start:2.119, end:2.259, label:'Messaging'      },
-      { id:'s8',           start:2.267, end:2.367, label:'The truth'      },
-      { id:'s-ritual',     start:2.375, end:2.475, label:'Serve'          },
-      { id:'s-channels',   start:2.483, end:2.583, label:'Channels'       },
-      { id:'s-competitive',start:2.591, end:2.731, label:'Competitive'    },
-      { id:'s10',          start:2.739, end:2.761, label:'The future'     },
-      { id:'s11',          start:2.769, end:2.849, label:'Accounts'       },
-      { id:'s12',          start:2.857, end:2.937, label:'สาโท สาโท'     },
+      { id:'s3',          start:0.367, end:0.500, label:'The drink'      },
+      { id:'s-bubbles',   start:0.508, end:0.548, label:'Sato Sato Is'   },
+      { id:'s-manifesto', start:0.552, end:0.698, label:'It is'          },
+      { id:'s4',          start:0.706, end:0.762, label:'The can'        },
+      { id:'s-who-1',     start:0.770, end:0.792, label:"Who it's for"   },
+      { id:'s-who-2',     start:0.800, end:0.868, label:'The portrait'   },
+      { id:'s-who-3',     start:0.876, end:0.898, label:'The claim'      },
+      { id:'s5a',         start:0.906, end:0.980, label:'Praew'           },
+      { id:'s-praew-1',   start:0.988, end:1.048, label:'Believer'        },
+      { id:'s5b',         start:1.056, end:1.128, label:'She drinks'      },
+      { id:'s-she-eats',  start:1.136, end:1.208, label:'She eats'        },
+      { id:'s-she-rates-intro',start:1.216,end:1.252, label:'She rates'   },
+      { id:'s-she-rates',  start:1.260, end:1.350, label:'She rates grid' },
+      { id:'s-who-4d',    start:1.358, end:1.382, label:'Brands'          },
+      { id:'pl-section',  start:1.390, end:1.620, label:'She listened to' },
+      { id:'s-friday-night',start:1.628,end:1.728, label:'Friday night'   },
+      { id:'s-praew-3',   start:1.736, end:1.806, label:'The moment'      },
+      { id:'s5e',          start:1.814, end:1.830, label:'Decision filter'},
+      { id:'s5f',          start:1.838, end:1.854, label:'Mirror'         },
+      { id:'s5g',          start:1.862, end:1.938, label:'Wrong world'    },
+      { id:'s5h',          start:1.946, end:1.962, label:'Simple filter'  },
+      { id:'s7',           start:1.970, end:2.174, label:'Occasions'      },
+      { id:'s-category',   start:2.182, end:2.272, label:'Category'       },
+      { id:'s9',           start:2.280, end:2.410, label:'Messaging'      },
+      { id:'s8',           start:2.418, end:2.568, label:'The truth'      },
+      { id:'s-ritual',     start:2.576, end:2.666, label:'Serve'          },
+      { id:'s-channels',   start:2.674, end:2.764, label:'Channels'       },
+      { id:'s-competitive',start:2.772, end:2.902, label:'Competitive'    },
+      { id:'s10',          start:2.910, end:2.926, label:'The future'     },
+      { id:'s11',          start:2.934, end:3.004, label:'Accounts'       },
+      { id:'s12',          start:3.012, end:3.092, label:'สาโท สาโท'     },
     ];
     SCENES.forEach(s => { s.mid = (s.start + s.end) / 2; });
     const sceneByID = {};
     SCENES.forEach(s => { sceneByID[s.id] = s; });
 
-    const BLEND = 0.028; // ramp window at each end of a scene
+    const BLEND = 0.022; // ramp window at each end of a scene
 
     // ── Build left nav ───────────────────────────────────────────
     const navEl = document.getElementById('side-nav');
@@ -3682,15 +3559,15 @@
     }
 
     function getFish(p) {
-      if (p >= 1.321 && p < 1.521) return { sz: 16, al: 0 }; // hidden in pl-section
+      if (p >= 1.390 && p < 1.620) return { sz: 16, al: 0 }; // hidden in pl-section
       let sz, al;
       if      (p < 0.23) { const t=p/0.23;         sz=4+t*t*28;         al=0.08+t*0.05; }
       else if (p < 0.37) { const t=(p-0.23)/0.14;  sz=32-t*22;          al=0.13-t*0.04; }
       else if (p < 0.88) {                           sz=8;                al=0.07; }
       else if (p < 0.953){ const t=(p-0.88)/0.073;  sz=8+t*26;           al=0.07+t*0.07; }
       else if (p < 1.041){ const t=(p-0.953)/0.088; sz=34-t*18;          al=0.14-t*0.04; }
-      else if (p < 2.739){                          sz=16;               al=0.10; }
-      else               { const t=(p-2.739)/0.198; sz=16+t*t*66;        al=0.10+t*0.18; }
+      else if (p < 2.910){                          sz=16;               al=0.10; }
+      else               { const t=(p-2.910)/0.182; sz=16+t*t*66;        al=0.10+t*0.18; }
       return { sz: Math.max(4, Math.round(sz)), al: Math.max(0.04, Math.min(0.28, al)) };
     }
 
@@ -3701,69 +3578,68 @@
       { p:0.225, r:27,  g:63,  b:122 },
       { p:0.355, r:27,  g:63,  b:122 },
       { p:0.367, r:18,  g:38,  b:70  },
-      { p:0.455, r:18,  g:38,  b:70  },   // S3 end
-      { p:0.460, r:8,   g:15,  b:28  },   // s-bubbles start (midnight)
-      { p:0.500, r:8,   g:15,  b:28  },   // s-bubbles end
-      { p:0.505, r:8,   g:15,  b:28  },   // manifesto start
-      { p:0.620, r:8,   g:15,  b:28  },   // manifesto end
-      { p:0.630, r:27,  g:63,  b:122 },   // S4 start
-      { p:0.690, r:27,  g:63,  b:122 },   // S4 end
-      { p:0.700, r:13,  g:28,  b:53  },   // s-who-1 start (night)
-      { p:0.722, r:13,  g:28,  b:53  },   // s-who-1 end
-      { p:0.730, r:8,   g:15,  b:28  },   // s-who-2 start (midnight)
-      { p:0.752, r:8,   g:15,  b:28  },   // s-who-2 end
-      { p:0.760, r:250, g:250, b:245 },   // s-who-3 start (cream)
-      { p:0.782, r:250, g:250, b:245 },   // s-who-3 end
-      { p:0.790, r:8,   g:15,  b:28  },   // s5a video intro (dark)
-      { p:0.870, r:8,   g:15,  b:28  },
-      { p:0.878, r:13,  g:28,  b:53  },   // s-praew-1 start (night)
-      { p:0.945, r:13,  g:28,  b:53  },
-      { p:0.953, r:250, g:250, b:245 },   // s5b she drinks (cream)
-      { p:1.033, r:250, g:250, b:245 },
-      { p:1.041, r:18,  g:8,   b:0   },   // s-she-eats (warm dark)
-      { p:1.121, r:18,  g:8,   b:0   },
-      { p:1.129, r:8,   g:15,  b:28  },   // s-she-rates-intro (dark)
-      { p:1.169, r:8,   g:15,  b:28  },
-      { p:1.177, r:8,   g:15,  b:28  },   // s-she-rates grid (dark)
-      { p:1.277, r:8,   g:15,  b:28  },
-      { p:1.285, r:250, g:250, b:245 },   // s-who-4d brands (cream)
-      { p:1.313, r:250, g:250, b:245 },
-      { p:1.321, r:52,  g:120, b:190 },   // pl-section start — deep sky blue
-      { p:1.521, r:8,   g:15,  b:28  },   // pl-section end — midnight
-      { p:1.529, r:8,   g:15,  b:28  },   // s-friday-night (midnight)
-      { p:1.639, r:8,   g:15,  b:28  },
-      { p:1.647, r:8,   g:15,  b:28  },   // s-praew-3 the moment (video, dark)
-      { p:1.727, r:8,   g:15,  b:28  },
-      { p:1.735, r:250, g:250, b:245 },   // s5e decision filter (cream)
-      { p:1.755, r:250, g:250, b:245 },
-      { p:1.763, r:13,  g:28,  b:53  },   // s5f mirror opening (dark)
-      { p:1.783, r:13,  g:28,  b:53  },
-      { p:1.791, r:13,  g:28,  b:53  },   // s5g wrong categories (dark)
-      { p:1.819, r:13,  g:28,  b:53  },
-      { p:1.827, r:13,  g:28,  b:53  },   // s5h simple filter (dark)
-      { p:1.847, r:13,  g:28,  b:53  },
-      { p:1.855, r:8,   g:15,  b:28  },   // s6 Wait (midnight)
-      { p:1.875, r:8,   g:15,  b:28  },
-      { p:1.883, r:27,  g:63,  b:122 },   // s7 Occasions (blue)
-      { p:2.003, r:27,  g:63,  b:122 },
-      { p:2.011, r:250, g:250, b:245 },   // s-category (cream)
-      { p:2.111, r:250, g:250, b:245 },
-      { p:2.119, r:250, g:250, b:245 },   // s9 Messaging (cream)
-      { p:2.259, r:250, g:250, b:245 },
-      { p:2.267, r:8,   g:15,  b:28  },   // s8 Truth (midnight)
-      { p:2.367, r:8,   g:15,  b:28  },
-      { p:2.375, r:250, g:250, b:245 },   // s-ritual (cream)
-      { p:2.475, r:250, g:250, b:245 },
-      { p:2.483, r:27,  g:63,  b:122 },   // s-channels (blue)
-      { p:2.583, r:27,  g:63,  b:122 },
-      { p:2.591, r:250, g:250, b:245 },   // s-competitive (cream)
-      { p:2.731, r:250, g:250, b:245 },
-      { p:2.739, r:8,   g:15,  b:28  },   // s10 Future (midnight)
-      { p:2.761, r:8,   g:15,  b:28  },
-      { p:2.769, r:250, g:250, b:245 },   // s11 Accounts (cream)
-      { p:2.849, r:250, g:250, b:245 },
-      { p:2.857, r:27,  g:63,  b:122 },   // s12 Coda (blue)
-      { p:2.937, r:27,  g:63,  b:122 },   // s12 Coda end
+      { p:0.500, r:18,  g:38,  b:70  },   // S3 end
+      { p:0.508, r:8,   g:15,  b:28  },   // s-bubbles start (midnight)
+      { p:0.548, r:8,   g:15,  b:28  },   // s-bubbles end
+      { p:0.552, r:8,   g:15,  b:28  },   // manifesto start
+      { p:0.698, r:8,   g:15,  b:28  },   // manifesto end
+      { p:0.706, r:27,  g:63,  b:122 },   // S4 start
+      { p:0.762, r:27,  g:63,  b:122 },   // S4 end
+      { p:0.770, r:13,  g:28,  b:53  },   // s-who-1 start (night)
+      { p:0.792, r:13,  g:28,  b:53  },   // s-who-1 end
+      { p:0.800, r:8,   g:15,  b:28  },   // s-who-2 start (midnight)
+      { p:0.868, r:8,   g:15,  b:28  },   // s-who-2 end
+      { p:0.876, r:250, g:250, b:245 },   // s-who-3 start (cream)
+      { p:0.898, r:250, g:250, b:245 },   // s-who-3 end
+      { p:0.906, r:8,   g:15,  b:28  },   // s5a video intro (dark)
+      { p:0.980, r:8,   g:15,  b:28  },
+      { p:0.988, r:13,  g:28,  b:53  },   // s-praew-1 start (night)
+      { p:1.048, r:13,  g:28,  b:53  },
+      { p:1.056, r:250, g:250, b:245 },   // s5b she drinks (cream)
+      { p:1.128, r:250, g:250, b:245 },
+      { p:1.136, r:18,  g:8,   b:0   },   // s-she-eats (warm dark)
+      { p:1.208, r:18,  g:8,   b:0   },
+      { p:1.216, r:8,   g:15,  b:28  },   // s-she-rates-intro (dark)
+      { p:1.252, r:8,   g:15,  b:28  },
+      { p:1.260, r:8,   g:15,  b:28  },   // s-she-rates grid (dark)
+      { p:1.350, r:8,   g:15,  b:28  },
+      { p:1.358, r:250, g:250, b:245 },   // s-who-4d brands (cream)
+      { p:1.382, r:250, g:250, b:245 },
+      { p:1.390, r:52,  g:120, b:190 },   // pl-section start — deep sky blue
+      { p:1.570, r:8,   g:15,  b:28  },   // pl-section end — midnight
+      { p:1.620, r:8,   g:15,  b:28  },   // pl-section close hold
+      { p:1.628, r:8,   g:15,  b:28  },   // s-friday-night (midnight)
+      { p:1.728, r:8,   g:15,  b:28  },
+      { p:1.736, r:8,   g:15,  b:28  },   // s-praew-3 the moment (video, dark)
+      { p:1.806, r:8,   g:15,  b:28  },
+      { p:1.814, r:250, g:250, b:245 },   // s5e decision filter (cream)
+      { p:1.830, r:250, g:250, b:245 },
+      { p:1.838, r:13,  g:28,  b:53  },   // s5f mirror opening (dark)
+      { p:1.854, r:13,  g:28,  b:53  },
+      { p:1.862, r:13,  g:28,  b:53  },   // s5g wrong categories (dark)
+      { p:1.938, r:13,  g:28,  b:53  },
+      { p:1.946, r:13,  g:28,  b:53  },   // s5h simple filter (dark)
+      { p:1.962, r:13,  g:28,  b:53  },
+      { p:1.970, r:27,  g:63,  b:122 },   // s7 Occasions (blue)
+      { p:2.174, r:27,  g:63,  b:122 },
+      { p:2.182, r:250, g:250, b:245 },   // s-category (cream)
+      { p:2.272, r:250, g:250, b:245 },
+      { p:2.280, r:250, g:250, b:245 },   // s9 Messaging (cream)
+      { p:2.410, r:250, g:250, b:245 },
+      { p:2.418, r:8,   g:15,  b:28  },   // s8 Truth (midnight)
+      { p:2.568, r:8,   g:15,  b:28  },
+      { p:2.576, r:250, g:250, b:245 },   // s-ritual (cream)
+      { p:2.666, r:250, g:250, b:245 },
+      { p:2.674, r:27,  g:63,  b:122 },   // s-channels (blue)
+      { p:2.764, r:27,  g:63,  b:122 },
+      { p:2.772, r:250, g:250, b:245 },   // s-competitive (cream)
+      { p:2.902, r:250, g:250, b:245 },
+      { p:2.910, r:8,   g:15,  b:28  },   // s10 Future (midnight)
+      { p:2.926, r:8,   g:15,  b:28  },
+      { p:2.934, r:250, g:250, b:245 },   // s11 Accounts (cream)
+      { p:3.004, r:250, g:250, b:245 },
+      { p:3.012, r:27,  g:63,  b:122 },   // s12 Coda (blue)
+      { p:3.092, r:27,  g:63,  b:122 },   // s12 Coda end
     ];
 
     function lerpBg(p) {
@@ -3783,12 +3659,20 @@
 
     // ── Scene opacity ────────────────────────────────────────────
     function sceneOp(s, p) {
-      const ri = Math.min(BLEND, (s.end-s.start)*0.3);
-      const ro = Math.min(BLEND, (s.end-s.start)*0.3);
+      const duration = s.end - s.start;
+      let ri = Math.min(BLEND, duration * 0.18);
+      let ro = Math.min(BLEND, duration * 0.18);
+      // Keep a readable plateau on short scenes instead of fading almost immediately.
+      const minPlateau = duration * 0.52;
+      if (duration - ri - ro < minPlateau) {
+        const ramp = Math.max(0.004, (duration - minPlateau) / 2);
+        ri = ramp;
+        ro = ramp;
+      }
       if (p < s.start) return 0;
-      if (p <= s.start+ri) return (p-s.start)/ri;
-      if (p <= s.end-ro)   return 1;
-      if (p <= s.end)      return 1-(p-(s.end-ro))/ro;
+      if (p <= s.start + ri) return ri > 0 ? (p - s.start) / ri : 1;
+      if (p <= s.end - ro) return 1;
+      if (p <= s.end) return ro > 0 ? 1 - (p - (s.end - ro)) / ro : 0;
       return 0;
     }
 
@@ -4111,6 +3995,12 @@
     let plCurrentLpPL    = 0;
     let plLastLpPL       = 0;
     let plCurrentPool    = 'day';
+    let plGalleryExiting = false;
+    let plExitDelta      = 0;
+    let plCardsCleared   = false;
+
+    const PL_GALLERY_END = 0.76;
+    const PL_EXIT_SCROLL = PL_DEPTH_RANGE * 1.4;
 
     // Atmosphere (2D canvas)
     let plAtmCanvas, plAtmCtx;
@@ -4326,8 +4216,35 @@
       requestAnimationFrame(plRenderLoop);
     }
 
+    function plUpdateGalleryExit(lpPL) {
+      if (lpPL < PL_GALLERY_END) {
+        if (plGalleryExiting) {
+          plGalleryExiting = false;
+          plCardsCleared = false;
+          plExitDelta = 0;
+          plPlanes.forEach(mesh => { delete mesh.userData.exitStartZ; });
+        }
+        return;
+      }
+      if (!plGalleryExiting) {
+        plGalleryExiting = true;
+        plPlanes.forEach(mesh => {
+          mesh.userData.exitStartZ = mesh.position.z;
+        });
+      }
+      const exitT = Math.min(1, (lpPL - PL_GALLERY_END) / 0.18);
+      plExitDelta = exitT * PL_EXIT_SCROLL;
+      plScrollVelocity = 0;
+    }
+
+    function plHideGalleryWhenCleared() {
+      const hide = plCardsCleared && plCurrentLpPL >= PL_GALLERY_END;
+      if (plThreeEl) plThreeEl.style.visibility = hide ? 'hidden' : 'visible';
+      if (plAtmCanvas) plAtmCanvas.style.visibility = hide ? 'hidden' : 'visible';
+    }
+
     function drawPLAtmosphere(lpPL, time) {
-      if (!plAtmCtx) return;
+      if (!plAtmCtx || plCardsCleared) return;
       const W = plAtmCanvas.width  = window.innerWidth;
       const H = plAtmCanvas.height = window.innerHeight;
       plAtmCtx.clearRect(0, 0, W, H);
@@ -4385,43 +4302,62 @@
       if (!plThreeScene || !plThreeRenderer) return;
 
       const time = ts * 0.001;
-
-      // Physics: dampen velocity and advance offset
-      plScrollVelocity *= 0.90;
-      plScrollOffset   += plScrollVelocity * (1 / 60) * 12;
-
       const HALF = PL_DEPTH_RANGE / 2;
       const pool = plCurrentPool === 'day' ? PL_DAY_IMGS : PL_NIGHT_IMGS;
+
+      if (!plGalleryExiting) {
+        plScrollVelocity *= 0.90;
+        plScrollOffset   += plScrollVelocity * (1 / 60) * 12;
+      } else if (plCurrentLpPL >= PL_GALLERY_END + 0.18 && !plCardsCleared) {
+        // Finish clearing cards if scroll overshoots the exit window.
+        plExitDelta += (1 / 60) * 22;
+      }
+
+      let anyVisible = false;
 
       plPlanes.forEach((mesh, i) => {
         const mat = plMaterials[i];
         if (!mat || !mat.uniforms.map.value) return;
 
-        const z    = ((mesh.userData.baseZ + plScrollOffset) % PL_DEPTH_RANGE + PL_DEPTH_RANGE) % PL_DEPTH_RANGE;
-        mesh.position.z = z - HALF;
+        let z;
+        let opacity;
+        let blur = 0;
 
-        const norm    = z / PL_DEPTH_RANGE;
-        const opacity = norm < 0.12 ? norm / 0.12 : norm > 0.88 ? (1 - norm) / 0.12 : 1;
-        const blur    = norm < 0.12 ? (1 - norm / 0.12) * 3.5 : norm > 0.88 ? ((norm - 0.88) / 0.12) * 3.5 : 0;
+        if (plGalleryExiting) {
+          mesh.position.z = mesh.userData.exitStartZ + plExitDelta;
+          opacity = mesh.position.z > HALF + 0.35 ? 0 : 1;
+        } else {
+          z = ((mesh.userData.baseZ + plScrollOffset) % PL_DEPTH_RANGE + PL_DEPTH_RANGE) % PL_DEPTH_RANGE;
+          mesh.position.z = z - HALF;
+          const norm = z / PL_DEPTH_RANGE;
+          opacity = norm < 0.12 ? norm / 0.12 : norm > 0.88 ? (1 - norm) / 0.12 : 1;
+          blur = norm < 0.12 ? (1 - norm / 0.12) * 3.5 : norm > 0.88 ? ((norm - 0.88) / 0.12) * 3.5 : 0;
+        }
+
+        if (opacity > 0.02) anyVisible = true;
 
         mat.uniforms.opacity.value     = Math.max(0, Math.min(1, opacity));
         mat.uniforms.blurAmount.value  = blur;
         mat.uniforms.scrollForce.value = plScrollVelocity * 0.008;
         mat.uniforms.time.value        = time;
 
-        // Swap to next image each time this plane wraps from back to front
-        const prevNorm = mesh.userData.prevNorm ?? norm;
-        if (norm < 0.05 && prevNorm > 0.85 && pool.length > PL_PLANE_COUNT) {
-          const curIdx = mesh.userData.imgIdx ?? i;
-          const nextIdx = (curIdx + PL_PLANE_COUNT) % pool.length;
-          const src = pool[nextIdx];
-          const tex = plTexMap[src];
-          if (tex) { plApplyTex(mesh, mat, tex); mesh.userData.imgIdx = nextIdx; }
+        if (!plGalleryExiting) {
+          const norm = z / PL_DEPTH_RANGE;
+          const prevNorm = mesh.userData.prevNorm ?? norm;
+          if (norm < 0.05 && prevNorm > 0.85 && pool.length > PL_PLANE_COUNT) {
+            const curIdx = mesh.userData.imgIdx ?? i;
+            const nextIdx = (curIdx + PL_PLANE_COUNT) % pool.length;
+            const src = pool[nextIdx];
+            const tex = plTexMap[src];
+            if (tex) { plApplyTex(mesh, mat, tex); mesh.userData.imgIdx = nextIdx; }
+          }
+          mesh.userData.prevNorm = norm;
         }
-        mesh.userData.prevNorm = norm;
       });
 
-      // Day → night pool swap
+      plCardsCleared = plGalleryExiting && !anyVisible;
+      plHideGalleryWhenCleared();
+
       plSwapPool(plCurrentLpPL);
 
       plThreeRenderer.render(plThreeScene, plThreeCamera);
@@ -4429,13 +4365,27 @@
     }
 
     // ── PraewListens — state, zones, audio ──────────────────────────
-    const plCassetteEl   = document.getElementById('pl-cassette');
-    const plDayNightPill = document.getElementById('pl-day-night-pill');
     const plOpenEl       = document.getElementById('pl-open');
+    const plIntroPlayBtn = document.getElementById('pl-intro-play');
+    const plIntroPlayWrap = document.getElementById('pl-intro-play-wrap');
     const plZoneTextEl   = document.getElementById('pl-zone-text');
-    const plCloseEl      = document.getElementById('pl-close');
+    const plThreeEl      = document.getElementById('pl-three-container');
     let   plActiveZone   = null;
     let   plAudioPlaying = false;
+    let   plActiveAudioTrack = null;
+    let   plAudioPaused  = false;
+    let   plUserStarted  = false;
+
+    const PL_MUSIC_START       = 0.06;
+    const PL_MUSIC_END         = 1.0;
+    const PL_DAY_FADE_START    = 0.50;
+    const PL_DAY_FADE_END      = 0.60;
+    const PL_SECTION_FADE_START = 0.90;
+
+    const PL_TRACKS = [
+      { id:'day',   t0:0.06, t1:0.60, src:'./audio/day-1.m4a',   startAt:73, song:'Running Out', artist:'HYBS',  day:true  },
+      { id:'night', t0:0.50, t1:1.00, src:'./audio/night-1.m4a', startAt:53, song:'ล้มเหลวเป็นตัวเอง', artist:'4EVE', day:false },
+    ];
 
     const PL_ZONES = [
       { t0:0.06, t1:0.16, label:'MORNING',        song:'ไม่ใช่เรื่องบังเอิญ',  artist:'MILLI',          day:true  },
@@ -4445,11 +4395,10 @@
       { t0:0.46, t1:0.55, label:'LATE AFTERNOON', song:'Running Out',           artist:'HYBS',           day:true  },
       { t0:0.55, t1:0.64, label:'EVENING',        song:'September Love',        artist:'Phum Viphurit',  day:false },
       { t0:0.64, t1:0.73, label:'EVENING',        song:'ดาวที่เดินได้',          artist:'Three Man Down', day:false },
-      { t0:0.73, t1:0.82, label:'NIGHT',          song:'ล้มเหลวเป็นตัวเอง',     artist:'4EVE',           day:false },
-      { t0:0.82, t1:0.90, label:'NIGHT',          song:'ไม่ต้องรู้',             artist:'BUS',            day:false },
+      { t0:0.73, t1:0.76, label:'NIGHT',          song:'ล้มเหลวเป็นตัวเอง',     artist:'4EVE',           day:false },
     ];
 
-    // Audio — add ./audio/praew-day.mp3 and ./audio/praew-night.mp3 to enable
+    // Scroll-synced audio — day-1.m4a + night-1.m4a in ./audio/
     let plAudioCtx  = null;
     let plGainDay   = null;
     let plGainNight = null;
@@ -4460,46 +4409,131 @@
       if (plAudioCtx) return;
       try {
         plAudioCtx  = new (window.AudioContext || window.webkitAudioContext)();
-        plGainDay   = plAudioCtx.createGain(); plGainDay.gain.value   = 1;
+        plGainDay   = plAudioCtx.createGain(); plGainDay.gain.value   = 0;
         plGainNight = plAudioCtx.createGain(); plGainNight.gain.value = 0;
         plAudioCtx.createMediaElementSource(plAudDay).connect(plGainDay).connect(plAudioCtx.destination);
         plAudioCtx.createMediaElementSource(plAudNight).connect(plGainNight).connect(plAudioCtx.destination);
-        plAudDay.src   = './audio/praew-day.mp3';
-        plAudNight.src = './audio/praew-night.mp3';
-        plAudDay.loop   = true;
-        plAudNight.loop = true;
+        plAudDay.src    = PL_TRACKS[0].src;
+        plAudNight.src  = PL_TRACKS[1].src;
+        plAudDay.preload   = 'auto';
+        plAudNight.preload = 'auto';
       } catch(e) {}
     }
 
-    function plPlay() {
+    function plPlayTrack(trackId) {
       plInitAudio();
-      if (plAudioCtx && plAudioCtx.state === 'suspended') plAudioCtx.resume();
-      plAudDay.play().catch(() => {});
-      plAudNight.play().catch(() => {});
+      if (!plAudioCtx) return;
+      if (plAudioCtx.state === 'suspended') plAudioCtx.resume();
+
+      const isDay = trackId === 'day';
+      plStartTrack(trackId);
+      if (isDay) {
+        plAudNight.pause();
+        plGainDay.gain.value   = 1;
+        plGainNight.gain.value = 0;
+      } else {
+        plAudDay.pause();
+        plGainDay.gain.value   = 0;
+        plGainNight.gain.value = 1;
+      }
+
+      plActiveAudioTrack = trackId;
       plAudioPlaying = true;
-      plCassetteEl.classList.add('playing', 'active');
-      document.getElementById('pl-icon-play').style.display  = 'none';
-      document.getElementById('pl-icon-pause').style.display = 'flex';
+      plAudioPaused  = false;
     }
 
-    function plPause() {
+    function plStopAudio() {
       plAudDay.pause();
       plAudNight.pause();
+      if (plGainDay) {
+        plGainDay.gain.value   = 0;
+        plGainNight.gain.value = 0;
+      }
+      plActiveAudioTrack = null;
       plAudioPlaying = false;
-      plCassetteEl.classList.remove('playing');
-      document.getElementById('pl-icon-play').style.display  = 'block';
-      document.getElementById('pl-icon-pause').style.display = 'none';
+      plAudioPaused  = false;
     }
 
-    function plCrossfadeToNight(t) {
-      if (!plGainDay) return;
-      plGainDay.gain.value   = 1 - t;
-      plGainNight.gain.value = t;
+    function plNudgeScrollIntoSection() {
+      const plSc  = sceneByID['pl-section'];
+      const maxSc = document.documentElement.scrollHeight - window.innerHeight;
+      const targetP = plSc.start + 0.14 * (plSc.end - plSc.start);
+      window.scrollTo({ top: (targetP / MAX_P) * maxSc, behavior: 'smooth' });
     }
 
-    document.getElementById('pl-play-btn').addEventListener('click', () => {
-      if (plAudioPlaying) plPause(); else plPlay();
-    });
+    function plIntroStart() {
+      if (plUserStarted) return;
+      plUserStarted = true;
+      plIntroPlayBtn.classList.add('is-playing');
+      plIntroPlayWrap.style.opacity = '0';
+      plIntroPlayWrap.style.pointerEvents = 'none';
+      plPlayTrack('day');
+      plNudgeScrollIntoSection();
+    }
+
+    plIntroPlayBtn.addEventListener('click', plIntroStart);
+
+    function plUpdateScrollAudio(inPL, lpPL) {
+      if (!plUserStarted) return;
+
+      const inMusic = inPL && lpPL >= PL_MUSIC_START && lpPL < PL_MUSIC_END;
+
+      if (!inMusic) {
+        if (plAudioPlaying) plStopAudio();
+        if (!inPL) {
+          plUserStarted = false;
+          plIntroPlayBtn.classList.remove('is-playing');
+          plIntroPlayWrap.style.opacity = '1';
+          plIntroPlayWrap.style.pointerEvents = 'auto';
+        }
+        return;
+      }
+      if (plAudioPaused) return;
+
+      plInitAudio();
+      if (!plAudioCtx) return;
+      if (plAudioCtx.state === 'suspended') plAudioCtx.resume();
+
+      plAudioPlaying = true;
+
+      if (lpPL < PL_DAY_FADE_START) {
+        if (plAudDay.paused) plStartTrack('day');
+        plAudNight.pause();
+        plGainDay.gain.value   = 1;
+        plGainNight.gain.value = 0;
+        plActiveAudioTrack = 'day';
+      } else if (lpPL < PL_DAY_FADE_END) {
+        const t = (lpPL - PL_DAY_FADE_START) / (PL_DAY_FADE_END - PL_DAY_FADE_START);
+        if (plAudDay.paused) plStartTrack('day');
+        if (plAudNight.paused) plStartTrack('night');
+        plGainDay.gain.value   = 1 - t;
+        plGainNight.gain.value = t;
+        plActiveAudioTrack = t >= 0.5 ? 'night' : 'day';
+        if (t >= 0.98) plAudDay.pause();
+      } else if (lpPL < PL_SECTION_FADE_START) {
+        plAudDay.pause();
+        plGainDay.gain.value = 0;
+        if (plAudNight.paused) plStartTrack('night');
+        plGainNight.gain.value = 1;
+        plActiveAudioTrack = 'night';
+      } else {
+        if (plAudNight.paused) plStartTrack('night');
+        plAudDay.pause();
+        plGainDay.gain.value = 0;
+        const fade = 1 - (lpPL - PL_SECTION_FADE_START) / (PL_MUSIC_END - PL_SECTION_FADE_START);
+        plGainNight.gain.value = Math.max(0, Math.min(1, fade));
+        plActiveAudioTrack = 'night';
+        if (fade <= 0.01) plStopAudio();
+      }
+    }
+
+    function plStartTrack(trackId) {
+      const track = PL_TRACKS.find(t => t.id === trackId);
+      if (!track) return;
+      const aud = trackId === 'day' ? plAudDay : plAudNight;
+      aud.currentTime = track.startAt;
+      aud.play().catch(() => {});
+    }
 
     const plListenLink = document.getElementById('pl-listen-link');
     if (plListenLink) {
@@ -4529,7 +4563,7 @@
       p>0.08 && p<0.98 ? wmEl.classList.add('on') : wmEl.classList.remove('on');
 
       // body bg class (for nav colour flip)
-      const onCream = (p >= 0.760 && p <= 0.782) || (p >= 0.953 && p <= 1.033) || (p >= 1.285 && p <= 1.313) || (p >= 1.735 && p <= 1.755) || (p >= 2.011 && p <= 2.111) || (p >= 2.119 && p <= 2.259) || (p >= 2.375 && p <= 2.475) || (p >= 2.591 && p <= 2.731) || (p >= 2.769 && p <= 2.849);
+      const onCream = (p >= 0.876 && p <= 0.898) || (p >= 1.056 && p <= 1.128) || (p >= 1.358 && p <= 1.382) || (p >= 1.814 && p <= 1.830) || (p >= 2.182 && p <= 2.272) || (p >= 2.280 && p <= 2.410) || (p >= 2.576 && p <= 2.666) || (p >= 2.772 && p <= 2.902) || (p >= 2.934 && p <= 3.004);
       document.body.classList.toggle('bg-cream', onCream);
 
       // background colour
@@ -4585,14 +4619,14 @@
       if (lpSm >= 0 && lpSm <= 1) {
         document.querySelector('.sm-is-head').classList.toggle('in', lpSm > 0.02);
         document.querySelectorAll('.sm-dot').forEach((el, i) => {
-          el.classList.toggle('in', lpSm > 0.08 + i * 0.05);
+          el.classList.toggle('in', lpSm > 0.06 + i * 0.04);
         });
         document.querySelectorAll('.sm-is-line').forEach((el, i) => {
-          el.classList.toggle('in', lpSm > 0.35 + i * 0.04);
+          el.classList.toggle('in', lpSm > 0.22 + i * 0.03);
         });
-        document.querySelector('.sm-not-head').classList.toggle('in', lpSm > 0.62);
+        document.querySelector('.sm-not-head').classList.toggle('in', lpSm > 0.48);
         document.querySelectorAll('.sm-not-line').forEach((el, i) => {
-          el.classList.toggle('in', lpSm > 0.67 + i * 0.03);
+          el.classList.toggle('in', lpSm > 0.54 + i * 0.025);
         });
       }
 
@@ -4614,8 +4648,8 @@
       const sw2s = sceneByID['s-who-2'];
       const lpW2 = (p - sw2s.start) / (sw2s.end - sw2s.start);
       if (lpW2 >= 0 && lpW2 <= 1) {
-        document.getElementById('sw2-p1').classList.toggle('in', lpW2 > 0.12);
-        document.getElementById('sw2-p2').classList.toggle('in', lpW2 > 0.52);
+        document.getElementById('sw2-p1').classList.toggle('in', lpW2 > 0.08);
+        document.getElementById('sw2-p2').classList.toggle('in', lpW2 > 0.38);
       }
 
       // S-WHO-3 the claim
@@ -4731,14 +4765,30 @@
       const plLpDelta = lpPL - plLastLpPL;
       plLastLpPL    = lpPL;
       plCurrentLpPL = lpPL;
-      if (inPL && Math.abs(plLpDelta) > 0.00001 && Math.abs(plLpDelta) < 0.08) {
+      if (inPL && lpPL < PL_GALLERY_END && Math.abs(plLpDelta) > 0.00001 && Math.abs(plLpDelta) < 0.08) {
         plScrollVelocity += plLpDelta * 95;
       }
+      plUpdateGalleryExit(lpPL);
 
-      plOpenEl.style.opacity      = lpPL < 0.04 ? '1' : lpPL < 0.10 ? String(Math.max(0, 1 - (lpPL - 0.04) / 0.06)) : '0';
-      plOpenEl.style.pointerEvents = lpPL < 0.06 ? 'auto' : 'none';
+      if (!plUserStarted) {
+        plOpenEl.style.opacity = inPL && lpPL >= 0.02 ? '1' : '0';
+      } else {
+        plOpenEl.style.opacity = inPL && lpPL < 0.18
+          ? String(Math.max(0, 1 - (lpPL - 0.10) / 0.08))
+          : '0';
+      }
+      plOpenEl.style.pointerEvents = 'none';
+      const showGallery = plUserStarted && lpPL >= 0.10;
+      if (plThreeEl && !plCardsCleared) {
+        plThreeEl.style.opacity = showGallery ? '1' : '0';
+        plThreeEl.style.visibility = 'visible';
+      }
+      if (plAtmCanvas && !plCardsCleared) {
+        plAtmCanvas.style.opacity = showGallery ? '1' : '0';
+        plAtmCanvas.style.visibility = 'visible';
+      }
 
-      const inZonePL = lpPL >= 0.06 && lpPL < 0.90;
+      const inZonePL = lpPL >= 0.06 && lpPL < 0.72;
       plZoneTextEl.style.opacity = inZonePL ? '1' : '0';
       document.getElementById('pl-scroll-cue').style.opacity = (lpPL >= 0.03 && lpPL < 0.08) ? '0.6' : '0';
 
@@ -4750,16 +4800,10 @@
           document.getElementById('pl-zone-song').textContent   = zone.song;
           document.getElementById('pl-zone-artist').textContent = zone.artist;
           plZoneTextEl.className = zone.day ? 'day' : 'night';
-          plDayNightPill.className    = zone.day ? '' : 'night';
-          plDayNightPill.textContent  = zone.day ? '☀ DAY' : '◑ NIGHT';
-          document.getElementById('pl-np-track').textContent  = zone.song;
-          document.getElementById('pl-np-artist').textContent = zone.artist;
-          if (plAudioPlaying) plCrossfadeToNight(zone.day ? 0 : 1);
         }
       }
 
-      plCloseEl.style.opacity = lpPL > 0.88 ? String(Math.min(1, (lpPL - 0.88) / 0.08)) : '0';
-      plCassetteEl.classList.toggle('visible', inPL && lpPL >= 0.06 && lpPL < 0.92);
+      plUpdateScrollAudio(inPL, lpPL);
 
       // ── S-FRIDAY-NIGHT — scroll poem ─────────────────────────────
       const sFN = sceneByID['s-friday-night'];
@@ -4813,10 +4857,10 @@
       const s5g = sceneByID['s5g'];
       const lp5g = (p - s5g.start) / (s5g.end - s5g.start);
       if (lp5g >= 0 && lp5g <= 1) {
-        document.getElementById('s5g-b1').classList.toggle('in', lp5g > 0.05);
-        document.getElementById('s5g-b2').classList.toggle('in', lp5g > 0.18);
-        document.getElementById('s5g-b3').classList.toggle('in', lp5g > 0.32);
-        document.getElementById('s5g-b4').classList.toggle('in', lp5g > 0.48);
+        document.getElementById('s5g-b1').classList.toggle('in', lp5g > 0.04);
+        document.getElementById('s5g-b2').classList.toggle('in', lp5g > 0.16);
+        document.getElementById('s5g-b3').classList.toggle('in', lp5g > 0.30);
+        document.getElementById('s5g-b4').classList.toggle('in', lp5g > 0.44);
       }
 
       // ── S5H — The simple filter (word by word) ───────────────────

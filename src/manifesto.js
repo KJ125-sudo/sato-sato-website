@@ -1,62 +1,111 @@
 import gsap from 'gsap';
-import ScrollTrigger from 'gsap/ScrollTrigger.js';
 import { prefersReducedMotion } from './utils.js';
 
-gsap.registerPlugin(ScrollTrigger);
+const FLOW_SPEED = 38;
+
+function waitForImages(container) {
+  const images = [...container.querySelectorAll('img')];
+  if (!images.length) return Promise.resolve();
+
+  return Promise.all(
+    images.map(
+      (img) =>
+        new Promise((resolve) => {
+          if (img.complete) resolve();
+          else {
+            img.addEventListener('load', resolve, { once: true });
+            img.addEventListener('error', resolve, { once: true });
+          }
+        }),
+    ),
+  );
+}
 
 export function initManifesto() {
-  const pin = document.getElementById('manifesto-pin');
-  const stage = document.getElementById('manifesto-stage');
-  const lines = document.querySelectorAll('[data-manifesto-line]');
-  const canStage = document.getElementById('manifesto-can')?.closest('.can-stage');
+  const showcase = document.getElementById('bento-can-showcase');
+  if (!showcase || prefersReducedMotion()) return;
 
-  if (!pin || !stage || !lines.length) return;
+  const wrap = showcase.querySelector('.bento-can-stack-wrap');
+  const stack = document.getElementById('bento-can-stack');
+  if (!wrap || !stack) return;
 
-  function showLine(index) {
-    lines.forEach((line, i) => {
-      const active = i === index;
-      line.classList.toggle('is-active', active);
-      if (!active) {
-        line.style.opacity = '0';
-        line.style.transform = 'translateY(20px)';
-      }
+  const cans = stack.querySelectorAll('.bento-can-stack__can');
+  const tiltValues = Array.from(cans, (can) => Number(can.dataset.tilt) || 0);
+  let flowTimeline;
+  let resizeTimer;
+
+  function startRocking() {
+    cans.forEach((can, i) => {
+      const baseTilt = tiltValues[i];
+      const rockAmount = i % 2 === 0 ? 10 : -9;
+      const sway = i % 2 === 0 ? 6 : -5;
+
+      gsap.set(can, { rotation: baseTilt, x: 0 });
+      gsap.to(can, {
+        rotation: baseTilt + rockAmount,
+        x: sway,
+        duration: 2.2 + i * 0.15,
+        repeat: -1,
+        yoyo: true,
+        ease: 'sine.inOut',
+        delay: i * 0.12,
+      });
     });
   }
 
-  if (prefersReducedMotion()) {
-    showLine(lines.length - 1);
-    return;
+  function getFlowBounds() {
+    const wrapHeight = wrap.clientHeight;
+    const stackHeight = stack.offsetHeight;
+    const startY = 0;
+    const endY = Math.min(0, wrapHeight - stackHeight);
+
+    return { startY, endY, travel: Math.abs(endY - startY) };
   }
 
-  ScrollTrigger.create({
-    trigger: pin,
-    start: 'top top',
-    end: 'bottom bottom',
-    pin: stage,
-    scrub: 0.5,
-    onUpdate: (self) => {
-      const p = self.progress;
-      const segment = 1 / lines.length;
-      const index = Math.min(lines.length - 1, Math.floor(p / segment));
-      const local = (p - index * segment) / segment;
+  function startFlow() {
+    if (flowTimeline) flowTimeline.kill();
+    gsap.killTweensOf([stack, ...cans]);
 
-      lines.forEach((line, i) => {
-        if (i !== index) {
-          line.classList.remove('is-active');
-          line.style.opacity = '0';
-          line.style.transform = 'translateY(20px)';
-          return;
-        }
+    const { startY, endY, travel } = getFlowBounds();
+    const duration = Math.max(travel / FLOW_SPEED, 0.01);
 
-        line.classList.add('is-active');
-        const eased = gsap.utils.clamp(0, 1, local / 0.75);
-        line.style.opacity = String(0.15 + eased * 0.85);
-        line.style.transform = `translateY(${(1 - eased) * 20}px)`;
+    gsap.set(stack, { y: startY });
+    startRocking();
+
+    if (travel <= 1) return;
+
+    flowTimeline = gsap
+      .timeline({ repeat: -1 })
+      .to(stack, {
+        y: endY,
+        duration,
+        ease: 'power1.inOut',
+      })
+      .to(stack, {
+        y: startY,
+        duration,
+        ease: 'power1.inOut',
       });
+  }
 
-      if (canStage) {
-        canStage.style.transform = `translateY(${-p * 48}px) rotate(${-6 + p * 8}deg)`;
-      }
-    },
+  waitForImages(stack).then(startFlow);
+
+  window.addEventListener('resize', () => {
+    window.clearTimeout(resizeTimer);
+    resizeTimer = window.setTimeout(() => {
+      waitForImages(stack).then(startFlow);
+    }, 150);
+  });
+}
+
+export function initCraftBento() {
+  const cloudsInner = document.getElementById('craft-clouds-inner');
+  if (!cloudsInner || prefersReducedMotion()) return;
+
+  gsap.to(cloudsInner, {
+    x: '-50%',
+    duration: 60,
+    repeat: -1,
+    ease: 'none',
   });
 }

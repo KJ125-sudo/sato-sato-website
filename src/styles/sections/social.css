@@ -1,0 +1,36 @@
+.section--social {
+  background: var(--surface-light);
+  color: var(--color-text-dark);
+  padding-block: clamp(64px, 10vh, 96px);
+}
+
+.social-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--grid-gap);
+}
+
+.social-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(24px, 4vw, 32px);
+  min-height: clamp(280px, 32vw, 360px);
+  padding: clamp(32px, 5vw, 48px);
+  background: var(--color-block-cream);
+  border-radius: var(--radius-bento);
+  text-align: center;
+}
+
+.social-card__logo {
+  width: clamp(80px, 14vw, 120px);
+  height: clamp(80px, 14vw, 120px);
+  object-fit: contain;
+}
+
+@media (max-width: 700px) {
+  .social-grid {
+    grid-template-columns: 1fr;
+  }
+}
