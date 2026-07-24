@@ -2612,7 +2612,7 @@
     }
 
     /* ── Scroll driver ──────────────────────────────────────── */
-    #driver { height: 8055vh; }
+    #driver { height: 8185vh; }
 
     /* ── Mobile ─────────────────────────────────────────────── */
     @media (max-width: 760px) {
@@ -3480,7 +3480,7 @@
 
     // ── Scene definitions: NO overlap between end and next start ─
     // Each entry: { id, start, end, label, midpoint(auto) }
-    const MAX_P = 3.232; // full scroll progress at bottom of page
+    const MAX_P = 3.284; // full scroll progress at bottom of page
 
     const SCENES = [
       { id:'s0',          start:-0.05, end:0.100, label:'Arrival'       },
@@ -3492,31 +3492,31 @@
       { id:'s4',          start:0.706, end:0.762, label:'The can'        },
       { id:'s-who-1',     start:0.770, end:0.792, label:"Who it's for"   },
       { id:'s-who-2',     start:0.800, end:0.868, label:'The portrait'   },
-      { id:'s-who-3',     start:0.876, end:0.898, label:'The claim'      },
-      { id:'s5a',         start:0.906, end:0.980, label:'Praew'           },
-      { id:'s-praew-1',   start:0.988, end:1.048, label:'Believer'        },
-      { id:'s5b',         start:1.056, end:1.128, label:'She drinks'      },
-      { id:'s-she-eats',  start:1.136, end:1.208, label:'She eats'        },
-      { id:'s-she-rates-intro',start:1.216,end:1.252, label:'She rates'   },
-      { id:'s-she-rates',  start:1.260, end:1.350, label:'She rates grid' },
-      { id:'s-who-4d',    start:1.358, end:1.382, label:'Brands'          },
-      { id:'pl-section',  start:1.390, end:1.620, label:'She listened to' },
-      { id:'s-friday-night',start:1.628,end:1.728, label:'Friday night'   },
-      { id:'s-praew-3',   start:1.736, end:1.806, label:'The moment'      },
-      { id:'s5e',          start:1.814, end:1.830, label:'Decision filter'},
-      { id:'s5f',          start:1.838, end:1.854, label:'Mirror'         },
-      { id:'s5g',          start:1.862, end:1.938, label:'Wrong world'    },
-      { id:'s5h',          start:1.946, end:1.962, label:'Simple filter'  },
-      { id:'s7',           start:1.970, end:2.174, label:'Occasions'      },
-      { id:'s-category',   start:2.182, end:2.272, label:'Category'       },
-      { id:'s9',           start:2.280, end:2.510, label:'Messaging'      },
-      { id:'s8',           start:2.518, end:2.668, label:'The truth'      },
-      { id:'s-ritual',     start:2.676, end:2.806, label:'Serve'          },
-      { id:'s-channels',   start:2.814, end:2.904, label:'Channels'       },
-      { id:'s-competitive',start:2.912, end:3.042, label:'Competitive'    },
-      { id:'s10',          start:3.050, end:3.066, label:'The future'     },
-      { id:'s11',          start:3.074, end:3.144, label:'Accounts'       },
-      { id:'s12',          start:3.152, end:3.232, label:'Sato Sato'      },
+      { id:'s-who-3',     start:0.876, end:0.950, label:'The claim'      },
+      { id:'s5a',         start:0.958, end:1.032, label:'Praew'           },
+      { id:'s-praew-1',   start:1.040, end:1.100, label:'Believer'        },
+      { id:'s5b',         start:1.108, end:1.180, label:'She drinks'      },
+      { id:'s-she-eats',  start:1.188, end:1.260, label:'She eats'        },
+      { id:'s-she-rates-intro',start:1.268,end:1.304, label:'She rates'   },
+      { id:'s-she-rates',  start:1.312, end:1.402, label:'She rates grid' },
+      { id:'s-who-4d',    start:1.410, end:1.434, label:'Brands'          },
+      { id:'pl-section',  start:1.442, end:1.672, label:'She listened to' },
+      { id:'s-friday-night',start:1.680,end:1.780, label:'Friday night'   },
+      { id:'s-praew-3',   start:1.788, end:1.858, label:'The moment'      },
+      { id:'s5e',          start:1.866, end:1.882, label:'Decision filter'},
+      { id:'s5f',          start:1.890, end:1.906, label:'Mirror'         },
+      { id:'s5g',          start:1.914, end:1.990, label:'Wrong world'    },
+      { id:'s5h',          start:1.998, end:2.014, label:'Simple filter'  },
+      { id:'s7',           start:2.022, end:2.226, label:'Occasions'      },
+      { id:'s-category',   start:2.234, end:2.324, label:'Category'       },
+      { id:'s9',           start:2.332, end:2.562, label:'Messaging'      },
+      { id:'s8',           start:2.570, end:2.720, label:'The truth'      },
+      { id:'s-ritual',     start:2.728, end:2.858, label:'Serve'          },
+      { id:'s-channels',   start:2.866, end:2.956, label:'Channels'       },
+      { id:'s-competitive',start:2.964, end:3.094, label:'Competitive'    },
+      { id:'s10',          start:3.102, end:3.118, label:'The future'     },
+      { id:'s11',          start:3.126, end:3.196, label:'Accounts'       },
+      { id:'s12',          start:3.204, end:3.284, label:'Sato Sato'      },
     ];
     SCENES.forEach(s => { s.mid = (s.start + s.end) / 2; });
     const sceneByID = {};
@@ -3610,15 +3610,15 @@
     }
 
     function getFish(p) {
-      if (p >= 1.390 && p < 1.620) return { sz: 16, al: 0 }; // hidden in pl-section
+      if (p >= 1.442 && p < 1.672) return { sz: 16, al: 0 }; // hidden in pl-section
       let sz, al;
       if      (p < 0.23) { const t=p/0.23;         sz=4+t*t*28;         al=0.08+t*0.05; }
       else if (p < 0.37) { const t=(p-0.23)/0.14;  sz=32-t*22;          al=0.13-t*0.04; }
       else if (p < 0.88) {                           sz=8;                al=0.07; }
-      else if (p < 0.953){ const t=(p-0.88)/0.073;  sz=8+t*26;           al=0.07+t*0.07; }
-      else if (p < 1.041){ const t=(p-0.953)/0.088; sz=34-t*18;          al=0.14-t*0.04; }
-      else if (p < 3.050){                          sz=16;               al=0.10; }
-      else               { const t=(p-3.050)/0.182; sz=16+t*t*66;        al=0.10+t*0.18; }
+      else if (p < 1.005){ const t=(p-0.88)/0.125;  sz=8+t*26;           al=0.07+t*0.07; }
+      else if (p < 1.093){ const t=(p-1.005)/0.088; sz=34-t*18;          al=0.14-t*0.04; }
+      else if (p < 3.102){                          sz=16;               al=0.10; }
+      else               { const t=(p-3.102)/0.182; sz=16+t*t*66;        al=0.10+t*0.18; }
       return { sz: Math.max(4, Math.round(sz)), al: Math.max(0.04, Math.min(0.28, al)) };
     }
 
@@ -3641,56 +3641,56 @@
       { p:0.800, r:8,   g:15,  b:28  },   // s-who-2 start (midnight)
       { p:0.868, r:8,   g:15,  b:28  },   // s-who-2 end
       { p:0.876, r:250, g:250, b:245 },   // s-who-3 start (cream)
-      { p:0.898, r:250, g:250, b:245 },   // s-who-3 end
-      { p:0.906, r:8,   g:15,  b:28  },   // s5a video intro (dark)
-      { p:0.980, r:8,   g:15,  b:28  },
-      { p:0.988, r:13,  g:28,  b:53  },   // s-praew-1 start (night)
-      { p:1.048, r:13,  g:28,  b:53  },
-      { p:1.056, r:250, g:250, b:245 },   // s5b she drinks (cream)
-      { p:1.128, r:250, g:250, b:245 },
-      { p:1.136, r:8,   g:15,  b:28  },   // s-she-eats (midnight)
-      { p:1.208, r:8,   g:15,  b:28  },
-      { p:1.216, r:8,   g:15,  b:28  },   // s-she-rates-intro (dark)
-      { p:1.252, r:8,   g:15,  b:28  },
-      { p:1.260, r:8,   g:15,  b:28  },   // s-she-rates grid (dark)
-      { p:1.350, r:8,   g:15,  b:28  },
-      { p:1.358, r:250, g:250, b:245 },   // s-who-4d brands (cream)
-      { p:1.382, r:250, g:250, b:245 },
-      { p:1.390, r:52,  g:120, b:190 },   // pl-section start — deep sky blue
-      { p:1.570, r:8,   g:15,  b:28  },   // pl-section end — midnight
-      { p:1.620, r:8,   g:15,  b:28  },   // pl-section close hold
-      { p:1.628, r:8,   g:15,  b:28  },   // s-friday-night (midnight)
-      { p:1.728, r:8,   g:15,  b:28  },
-      { p:1.736, r:8,   g:15,  b:28  },   // s-praew-3 the moment (video, dark)
-      { p:1.806, r:8,   g:15,  b:28  },
-      { p:1.814, r:250, g:250, b:245 },   // s5e decision filter (cream)
-      { p:1.830, r:250, g:250, b:245 },
-      { p:1.838, r:13,  g:28,  b:53  },   // s5f mirror opening (dark)
-      { p:1.854, r:13,  g:28,  b:53  },
-      { p:1.862, r:13,  g:28,  b:53  },   // s5g wrong categories (dark)
-      { p:1.938, r:13,  g:28,  b:53  },
-      { p:1.946, r:13,  g:28,  b:53  },   // s5h simple filter (dark)
-      { p:1.962, r:13,  g:28,  b:53  },
-      { p:1.970, r:27,  g:63,  b:122 },   // s7 Occasions (blue)
-      { p:2.174, r:27,  g:63,  b:122 },
-      { p:2.182, r:250, g:250, b:245 },   // s-category (cream)
-      { p:2.272, r:250, g:250, b:245 },
-      { p:2.280, r:250, g:250, b:245 },   // s9 Messaging (cream)
-      { p:2.510, r:250, g:250, b:245 },
-      { p:2.518, r:8,   g:15,  b:28  },   // s8 Truth (midnight)
-      { p:2.668, r:8,   g:15,  b:28  },
-      { p:2.676, r:250, g:250, b:245 },   // s-ritual (cream)
-      { p:2.806, r:250, g:250, b:245 },
-      { p:2.814, r:27,  g:63,  b:122 },   // s-channels (blue)
-      { p:2.904, r:27,  g:63,  b:122 },
-      { p:2.912, r:250, g:250, b:245 },   // s-competitive (cream)
-      { p:3.042, r:250, g:250, b:245 },
-      { p:3.050, r:8,   g:15,  b:28  },   // s10 Future (midnight)
-      { p:3.066, r:8,   g:15,  b:28  },
-      { p:3.074, r:250, g:250, b:245 },   // s11 Accounts (cream)
-      { p:3.144, r:250, g:250, b:245 },
-      { p:3.152, r:27,  g:63,  b:122 },   // s12 Coda (blue)
-      { p:3.232, r:27,  g:63,  b:122 },   // s12 Coda end
+      { p:0.950, r:250, g:250, b:245 },   // s-who-3 end
+      { p:0.958, r:8,   g:15,  b:28  },   // s5a video intro (dark)
+      { p:1.032, r:8,   g:15,  b:28  },
+      { p:1.040, r:13,  g:28,  b:53  },   // s-praew-1 start (night)
+      { p:1.100, r:13,  g:28,  b:53  },
+      { p:1.108, r:250, g:250, b:245 },   // s5b she drinks (cream)
+      { p:1.180, r:250, g:250, b:245 },
+      { p:1.188, r:8,   g:15,  b:28  },   // s-she-eats (midnight)
+      { p:1.260, r:8,   g:15,  b:28  },
+      { p:1.268, r:8,   g:15,  b:28  },   // s-she-rates-intro (dark)
+      { p:1.304, r:8,   g:15,  b:28  },
+      { p:1.312, r:8,   g:15,  b:28  },   // s-she-rates grid (dark)
+      { p:1.402, r:8,   g:15,  b:28  },
+      { p:1.410, r:250, g:250, b:245 },   // s-who-4d brands (cream)
+      { p:1.434, r:250, g:250, b:245 },
+      { p:1.442, r:52,  g:120, b:190 },   // pl-section start — deep sky blue
+      { p:1.622, r:8,   g:15,  b:28  },   // pl-section end — midnight
+      { p:1.672, r:8,   g:15,  b:28  },   // pl-section close hold
+      { p:1.680, r:8,   g:15,  b:28  },   // s-friday-night (midnight)
+      { p:1.780, r:8,   g:15,  b:28  },
+      { p:1.788, r:8,   g:15,  b:28  },   // s-praew-3 the moment (video, dark)
+      { p:1.858, r:8,   g:15,  b:28  },
+      { p:1.866, r:250, g:250, b:245 },   // s5e decision filter (cream)
+      { p:1.882, r:250, g:250, b:245 },
+      { p:1.890, r:13,  g:28,  b:53  },   // s5f mirror opening (dark)
+      { p:1.906, r:13,  g:28,  b:53  },
+      { p:1.914, r:13,  g:28,  b:53  },   // s5g wrong categories (dark)
+      { p:1.990, r:13,  g:28,  b:53  },
+      { p:1.998, r:13,  g:28,  b:53  },   // s5h simple filter (dark)
+      { p:2.014, r:13,  g:28,  b:53  },
+      { p:2.022, r:27,  g:63,  b:122 },   // s7 Occasions (blue)
+      { p:2.226, r:27,  g:63,  b:122 },
+      { p:2.234, r:250, g:250, b:245 },   // s-category (cream)
+      { p:2.324, r:250, g:250, b:245 },
+      { p:2.332, r:250, g:250, b:245 },   // s9 Messaging (cream)
+      { p:2.562, r:250, g:250, b:245 },
+      { p:2.570, r:8,   g:15,  b:28  },   // s8 Truth (midnight)
+      { p:2.720, r:8,   g:15,  b:28  },
+      { p:2.728, r:250, g:250, b:245 },   // s-ritual (cream)
+      { p:2.858, r:250, g:250, b:245 },
+      { p:2.866, r:27,  g:63,  b:122 },   // s-channels (blue)
+      { p:2.956, r:27,  g:63,  b:122 },
+      { p:2.964, r:250, g:250, b:245 },   // s-competitive (cream)
+      { p:3.094, r:250, g:250, b:245 },
+      { p:3.102, r:8,   g:15,  b:28  },   // s10 Future (midnight)
+      { p:3.118, r:8,   g:15,  b:28  },
+      { p:3.126, r:250, g:250, b:245 },   // s11 Accounts (cream)
+      { p:3.196, r:250, g:250, b:245 },
+      { p:3.204, r:27,  g:63,  b:122 },   // s12 Coda (blue)
+      { p:3.284, r:27,  g:63,  b:122 },   // s12 Coda end
     ];
 
     function lerpBg(p) {
@@ -4425,12 +4425,13 @@
     let   plAudioPaused  = false;
     let   plUserStarted  = false;
 
-    const PL_MUSIC_START       = 0.06;
+    const PL_MUSIC_START       = 0.0;
     const PL_MUSIC_END         = 1.0;
     const PL_DAY_FADE_START    = 0.50;
     const PL_DAY_FADE_END      = 0.60;
     const PL_SECTION_FADE_START = 0.90;
 
+    // Clips are pre-trimmed to the chorus (~2 min) so startAt is 0.
     const PL_TRACKS = [
       { id:'day',   t0:0.06, t1:0.60, src:'/Inside/audio/day-1.m4a',   startAt:0, song:'Running Out', artist:'HYBS',  day:true  },
       { id:'night', t0:0.50, t1:1.00, src:'/Inside/audio/night-1.m4a', startAt:0, song:'ล้มเหลวเป็นตัวเอง', artist:'4EVE', day:false },
@@ -4448,7 +4449,6 @@
     ];
 
     // Scroll-synced audio — day-1.m4a + night-1.m4a in ./audio/
-    // Sources are assigned lazily in plStartTrack so night isn't fetched until the fade.
     let plAudioCtx  = null;
     let plGainDay   = null;
     let plGainNight = null;
@@ -4456,6 +4456,7 @@
     const plAudNight = new Audio();
     plAudDay.preload = 'none';
     plAudNight.preload = 'none';
+    const plTrackLoading = { day: false, night: false };
 
     function plInitAudio() {
       if (plAudioCtx) return;
@@ -4465,6 +4466,9 @@
         plGainNight = plAudioCtx.createGain(); plGainNight.gain.value = 0;
         plAudioCtx.createMediaElementSource(plAudDay).connect(plGainDay).connect(plAudioCtx.destination);
         plAudioCtx.createMediaElementSource(plAudNight).connect(plGainNight).connect(plAudioCtx.destination);
+        // Assign sources once up front; preload=none means bytes are not fetched yet.
+        plAudDay.src = PL_TRACKS[0].src;
+        plAudNight.src = PL_TRACKS[1].src;
       } catch (e) {
         console.warn('She Listens audio init failed', e);
       }
@@ -4495,6 +4499,8 @@
     function plStopAudio() {
       plAudDay.pause();
       plAudNight.pause();
+      plTrackLoading.day = false;
+      plTrackLoading.night = false;
       if (plGainDay) {
         plGainDay.gain.value   = 0;
         plGainNight.gain.value = 0;
@@ -4582,29 +4588,40 @@
       if (!track) return;
       const aud = trackId === 'day' ? plAudDay : plAudNight;
 
-      // Assign src only when this track is needed (night waits until the fade).
-      if (!aud.src || !aud.src.includes(track.src)) {
+      if (!aud.getAttribute('src')) {
         aud.src = track.src;
-        aud.preload = 'auto';
       }
 
-      const playFromChorus = () => {
-        if (aud.readyState >= 1) {
-          aud.currentTime = track.startAt;
-        } else {
-          aud.addEventListener('loadedmetadata', () => { aud.currentTime = track.startAt; }, { once: true });
+      // Already playing — do not restart or re-seek.
+      if (!aud.paused) return;
+
+      // A load/play is already in flight; don't abort it with another load().
+      if (plTrackLoading[trackId]) return;
+
+      const playNow = () => {
+        plTrackLoading[trackId] = false;
+        if (track.startAt > 0 && Number.isFinite(aud.duration) && aud.duration > track.startAt) {
+          try { aud.currentTime = track.startAt; } catch (_) {}
         }
-        aud.play().catch((err) => console.warn('She Listens playback failed', trackId, err));
+        aud.play().catch((err) => {
+          plTrackLoading[trackId] = false;
+          console.warn('She Listens playback failed', trackId, err);
+        });
       };
 
-      if (aud.readyState >= 2) {
-        playFromChorus();
+      if (aud.readyState >= 3) {
+        playNow();
         return;
       }
 
-      aud.addEventListener('canplay', playFromChorus, { once: true });
-      aud.addEventListener('error', () => console.warn('She Listens audio failed to load', trackId, aud.error), { once: true });
-      aud.load();
+      plTrackLoading[trackId] = true;
+      aud.addEventListener('canplay', playNow, { once: true });
+      aud.addEventListener('error', () => {
+        plTrackLoading[trackId] = false;
+        console.warn('She Listens audio failed to load', trackId, aud.error);
+      }, { once: true });
+      // Only kick network once; repeated load() was aborting the day track mid-fetch.
+      if (aud.readyState < 1) aud.load();
     }
 
     const plListenLink = document.getElementById('pl-listen-link');
@@ -4635,7 +4652,7 @@
       p>0.08 && p<0.98 ? wmEl.classList.add('on') : wmEl.classList.remove('on');
 
       // body bg class (for nav colour flip)
-      const onCream = (p >= 0.876 && p <= 0.898) || (p >= 1.056 && p <= 1.128) || (p >= 1.358 && p <= 1.382) || (p >= 1.814 && p <= 1.830) || (p >= 2.182 && p <= 2.272) || (p >= 2.280 && p <= 2.510) || (p >= 2.676 && p <= 2.806) || (p >= 2.912 && p <= 3.042) || (p >= 3.074 && p <= 3.144);
+      const onCream = (p >= 0.876 && p <= 0.950) || (p >= 1.108 && p <= 1.180) || (p >= 1.410 && p <= 1.434) || (p >= 1.866 && p <= 1.882) || (p >= 2.234 && p <= 2.324) || (p >= 2.332 && p <= 2.562) || (p >= 2.728 && p <= 2.858) || (p >= 2.964 && p <= 3.094) || (p >= 3.126 && p <= 3.196);
       document.body.classList.toggle('bg-cream', onCream);
 
       // background colour
@@ -4728,9 +4745,9 @@
       const sw3s = sceneByID['s-who-3'];
       const lpW3 = (p - sw3s.start) / (sw3s.end - sw3s.start);
       if (lpW3 >= 0 && lpW3 <= 1) {
-        document.getElementById('sw3-pre').classList.toggle('in',   lpW3 > 0.12);
-        document.getElementById('sw3-claim').classList.toggle('in', lpW3 > 0.38);
-        document.getElementById('sw3-post').classList.toggle('in',  lpW3 > 0.68);
+        document.getElementById('sw3-pre').classList.toggle('in',   lpW3 > 0.06);
+        document.getElementById('sw3-claim').classList.toggle('in', lpW3 > 0.16);
+        document.getElementById('sw3-post').classList.toggle('in',  lpW3 > 0.30);
       }
 
       // S-WHO-4D brands — floating parallax images stagger + text + manifesto
