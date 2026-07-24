@@ -186,31 +186,31 @@
     #s0-thai {
       font-family: 'Playfair Display', serif;
       font-weight: 900;
-      font-size: clamp(18vw, 22vw, 30vw);
-      line-height: 0.78;
+      font-size: clamp(72px, 14vw, 160px);
+      line-height: 0.9;
       color: var(--cream);
       text-align: center;
-      letter-spacing: -0.02em;
+      letter-spacing: -2px;
     }
 
-    .s0c {
+    .s0-line {
       display: inline-block;
       opacity: 0;
       transform: translateY(28px);
       transition: opacity 0.65s cubic-bezier(0.16,1,0.3,1),
                   transform 0.65s cubic-bezier(0.16,1,0.3,1);
     }
-    .s0c.in { opacity: 1; transform: translateY(0); }
+    .s0-line.in { opacity: 1; transform: translateY(0); }
 
     #s0-sub {
-      font-family: 'DM Mono', monospace;
-      font-size: 10px;
-      letter-spacing: 6px;
-      text-transform: uppercase;
-      color: rgba(250,250,245,0.18);
-      margin-top: 3.5rem;
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 300;
+      font-size: clamp(14px, 2vw, 20px);
+      letter-spacing: 0.4px;
+      color: rgba(250,250,245,0.55);
+      margin-top: 2rem;
       opacity: 0;
-      transition: opacity 1s ease 1.8s;
+      transition: opacity 1s ease 1.2s;
     }
     #s0-sub.in { opacity: 1; }
 
@@ -2785,7 +2785,7 @@
 
   <div id="wm">
     <span id="wm-en">Sato Sato</span>
-    <span id="wm-th">สาโท สาโท</span>
+    <span id="wm-th">Sato Sato</span>
   </div>
 
   <!-- Left quick-nav -->
@@ -2796,8 +2796,11 @@
     <!-- S0: ARRIVAL -->
     <section class="scene" id="s0" aria-label="Opening">
       <div id="s0-grid" aria-hidden="true"></div>
-      <div id="s0-thai" aria-label="Sato Sato"></div>
-      <div id="s0-sub">Thailand's drink. Arrived now.</div>
+      <div id="s0-thai" aria-label="Sato Sato">
+        <span class="s0-line">Sato</span><br>
+        <span class="s0-line">Sato</span>
+      </div>
+      <div id="s0-sub">Traditional Sato. Made Modern</div>
       <div id="s0-cue">Scroll</div>
     </section>
 
@@ -2871,7 +2874,7 @@
         <p class="s4-word">Cold.<br>Sparkling.<br>Thai.</p>
       </div>
       <div id="s4-can">
-        <img src="/images/floating-blank-can.png" alt="Sato Sato can" draggable="false">
+        <img loading="lazy" decoding="async" src="/images/floating-blank-can.png" alt="Sato Sato can" draggable="false">
       </div>
       <div id="s4-right" class="s4-side">
         <span class="s4-tag">Brewed from sticky rice</span>
@@ -2883,7 +2886,7 @@
     <!-- S-WHO-1: ANNOUNCEMENT -->
     <section class="scene" id="s-who-1" aria-label="Who it's for — Announcement">
       <div id="sw1-photo" aria-hidden="true">
-        <img src="/images/who-is-it-made-for-2.jpeg" alt="" draggable="false">
+        <img loading="lazy" decoding="async" src="/images/who-is-it-made-for-2.jpeg" alt="" draggable="false">
       </div>
       <div id="sw1-veil" aria-hidden="true"></div>
       <div id="sw1-stage">
@@ -2920,7 +2923,7 @@
     <section class="scene" id="s5a" aria-label="Praew — Primary persona">
       <div id="s5a-video-wrap">
         <div id="s5a-video-inner">
-          <video id="s5a-video" src="/images/praew-intro.mp4" autoplay muted loop playsinline></video>
+          <video id="s5a-video" src="/images/praew-intro.mp4" autoplay muted loop playsinline preload="metadata"></video>
           <div id="s5a-grad"></div>
           <div id="s5a-overlay">
             <span id="s5a-kicker">Primary persona</span>
@@ -2941,7 +2944,7 @@
         </div>
         <div id="sp1-card">
           <div id="sp1-card-photo">
-            <img src="/images/praew-persona.webp.png" alt="Praew" />
+            <img loading="lazy" decoding="async" src="/images/praew-persona.webp.png" alt="Praew" />
           </div>
           <div id="sp1-card-body">
             <div id="sp1-card-name">
@@ -2975,23 +2978,23 @@
       <div id="s5b-heading"><div id="s5b-heading-text">She<br>drinks</div></div>
       <div id="s5b-bento">
         <div class="s5b-cell">
-          <img src="/images/she_drinks_beer_with_food.png" alt="Beer with food">
+          <img loading="lazy" decoding="async" src="/images/she_drinks_beer_with_food.png" alt="Beer with food">
           <span class="s5b-lbl">Beer with food</span>
         </div>
         <div class="s5b-cell">
-          <img src="/images/she_drinks_matcha.png" alt="Matcha">
+          <img loading="lazy" decoding="async" src="/images/she_drinks_matcha.png" alt="Matcha">
           <span class="s5b-lbl">Matcha</span>
         </div>
         <div class="s5b-cell">
-          <img src="/images/she_drinks_craftbeer.png" alt="Craft beer sometimes">
+          <img loading="lazy" decoding="async" src="/images/she_drinks_craftbeer.png" alt="Craft beer sometimes">
           <span class="s5b-lbl">Craft beer sometimes</span>
         </div>
         <div class="s5b-cell">
-          <img src="/images/she_drinks_cocktail.png" alt="Cocktails when the place is right">
+          <img loading="lazy" decoding="async" src="/images/she_drinks_cocktail.png" alt="Cocktails when the place is right">
           <span class="s5b-lbl">Cocktails when the place is right</span>
         </div>
         <div class="s5b-cell">
-          <img src="/images/she_drinks_highballs.png" alt="Highballs">
+          <img loading="lazy" decoding="async" src="/images/she_drinks_highballs.png" alt="Highballs">
           <span class="s5b-lbl">Highballs</span>
         </div>
       </div>
@@ -3002,23 +3005,23 @@
       <div id="s5eats-heading"><div id="s5eats-heading-text">She<br>eats</div></div>
       <div id="s5eats-bento">
         <div class="s5eats-cell">
-          <img src="/images/where_they_eat_moo_krata.png" alt="Moo krata">
+          <img loading="lazy" decoding="async" src="/images/where_they_eat_moo_krata.png" alt="Moo krata">
           <span class="s5eats-lbl">Moo krata</span>
         </div>
         <div class="s5eats-cell">
-          <img src="/images/where_they_eat_street_food.png" alt="Street food">
+          <img loading="lazy" decoding="async" src="/images/where_they_eat_street_food.png" alt="Street food">
           <span class="s5eats-lbl">Street food</span>
         </div>
         <div class="s5eats-cell">
-          <img src="/images/where_they_eat_izakaya.png" alt="Izakaya and ramen">
+          <img loading="lazy" decoding="async" src="/images/where_they_eat_izakaya.png" alt="Izakaya and ramen">
           <span class="s5eats-lbl">Izakaya · Ramen</span>
         </div>
         <div class="s5eats-cell">
-          <img src="/images/where_they_eat_modern_thai.png" alt="Modern Thai">
+          <img loading="lazy" decoding="async" src="/images/where_they_eat_modern_thai.png" alt="Modern Thai">
           <span class="s5eats-lbl">Modern Thai</span>
         </div>
         <div class="s5eats-cell">
-          <img src="/images/where_they_eat_korean_bbq.png" alt="Korean BBQ">
+          <img loading="lazy" decoding="async" src="/images/where_they_eat_korean_bbq.png" alt="Korean BBQ">
           <span class="s5eats-lbl">Korean BBQ</span>
         </div>
       </div>
@@ -3037,15 +3040,15 @@
       <div id="sr-kicker">She rates</div>
       <div id="sr-grid">
         <div class="sr-cell">
-          <img src="/images/she_rates_lisa.png" alt="LISA">
+          <img loading="lazy" decoding="async" src="/images/she_rates_lisa.png" alt="LISA">
           <span class="sr-img-lbl">LISA</span>
         </div>
         <div class="sr-cell">
-          <img src="/images/she_rates_milli.png" alt="MILLI">
+          <img loading="lazy" decoding="async" src="/images/she_rates_milli.png" alt="MILLI">
           <span class="sr-img-lbl">MILLI</span>
         </div>
         <div class="sr-cell">
-          <img src="/images/she_rates_davika.png" alt="Davika">
+          <img loading="lazy" decoding="async" src="/images/she_rates_davika.png" alt="Davika">
           <span class="sr-img-lbl">Davika</span>
         </div>
         <div class="sr-text-cell">
@@ -3120,7 +3123,7 @@
     <section class="scene" id="s-praew-3" aria-label="The moment">
       <div id="sp3-video-wrap">
         <div id="sp3-video-inner">
-          <video id="sp3-video" src="/images/the-moment.mp4" autoplay muted loop playsinline></video>
+          <video id="sp3-video" src="/images/the-moment.mp4" autoplay muted loop playsinline preload="metadata"></video>
           <div id="sp3-grad"></div>
           <div id="sp3-overlay">
             <span id="sp3-kicker">The moment</span>
@@ -3736,23 +3739,11 @@
       grid.appendChild(tile);
     });
 
-    // ── Build S0 Thai chars ──────────────────────────────────────
-    const thaiStr  = 'สาโท\nสาโท';
-    const thaiEl   = document.getElementById('s0-thai');
-    const s0chars  = [];
-    let line2 = false;
-    for (const ch of thaiStr) {
-      if (ch === '\n') { thaiEl.appendChild(document.createElement('br')); line2=true; continue; }
-      const sp = document.createElement('span');
-      sp.className = 's0c';
-      sp.textContent = ch;
-      thaiEl.appendChild(sp);
-      s0chars.push(sp);
-    }
-
-    const s0sub = document.getElementById('s0-sub');
-    s0chars.forEach((c,i) => setTimeout(()=> c.classList.add('in'), 500+i*130));
-    setTimeout(()=> s0sub.classList.add('in'), 500+s0chars.length*130+400);
+    // ── Build S0 title lines ─────────────────────────────────────
+    const s0lines = document.querySelectorAll('#s0-thai .s0-line');
+    const s0sub   = document.getElementById('s0-sub');
+    s0lines.forEach((el, i) => setTimeout(() => el.classList.add('in'), 500 + i * 200));
+    setTimeout(() => s0sub.classList.add('in'), 500 + s0lines.length * 200 + 400);
 
     // ── Floating parallax (s-who-4d — BRANDS THEY RATE) ─────────
     // Mirrors the Floating/FloatingElement React component in vanilla JS:
@@ -4415,8 +4406,8 @@
         plAudioCtx.createMediaElementSource(plAudNight).connect(plGainNight).connect(plAudioCtx.destination);
         plAudDay.src    = PL_TRACKS[0].src;
         plAudNight.src  = PL_TRACKS[1].src;
-        plAudDay.preload   = 'auto';
-        plAudNight.preload = 'auto';
+        plAudDay.preload   = 'none';
+        plAudNight.preload = 'none';
       } catch(e) {}
     }
 
