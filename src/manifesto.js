@@ -97,15 +97,3 @@ export function initManifesto() {
     }, 150);
   });
 }
-
-export function initCraftBento() {
-  const cloudsInner = document.getElementById('craft-clouds-inner');
-  if (!cloudsInner || prefersReducedMotion()) return;
-
-  gsap.to(cloudsInner, {
-    x: '-50%',
-    duration: 60,
-    repeat: -1,
-    ease: 'none',
-  });
-}

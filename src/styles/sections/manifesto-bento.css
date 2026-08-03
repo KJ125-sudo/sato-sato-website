@@ -1,6 +1,6 @@
 .section--bento {
   padding-block: var(--grid-gap);
-  background: var(--surface-light);
+  background: var(--surface-canvas);
 }
 
 #manifesto .bento-grid {
@@ -13,94 +13,18 @@
 }
 
 .section--bento-b {
-  position: relative;
-  overflow: hidden;
-  background: #4a90e2;
-}
-
-.bento-b__stage {
-  position: absolute;
-  inset: 0;
-  z-index: 0;
-}
-
-.bento-b__layer {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-  pointer-events: none;
-}
-
-.bento-b__sky {
-  z-index: 0;
-}
-
-.bento-b__clouds-track {
-  position: absolute;
-  inset: 0;
-  z-index: 1;
-  overflow: hidden;
-}
-
-.bento-b__clouds-inner {
-  display: flex;
-  width: 200%;
-  height: 100%;
-  will-change: transform;
-}
-
-.bento-b__clouds {
-  position: relative;
-  flex: 0 0 50%;
-  width: 50%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-}
-
-.bento-b .bento-grid {
-  position: relative;
-  z-index: 1;
-}
-
-.bento-card--scene {
-  background: transparent;
-  min-height: 480px;
-}
-
-.bento-b__rice {
-  position: absolute;
-  inset: 0;
-  z-index: 2;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center bottom;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .bento-b__clouds-inner {
-    transform: none !important;
-  }
+  background: var(--surface-canvas);
 }
 
 .bento-b .bento-card--cream .text-body {
   color: var(--color-text-dark-muted);
 }
 
-.bento-b .bento-card--blue .text-body {
-  color: rgba(250, 250, 245, 0.72);
-}
-
 .bento-icon-badge {
   width: 72px;
   height: 72px;
   border-radius: 50%;
-  background: var(--color-lime);
+  background: #fff;
   border: 3px solid var(--color-text-dark);
   display: grid;
   place-items: center;

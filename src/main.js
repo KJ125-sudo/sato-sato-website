@@ -8,7 +8,7 @@ import { initFind } from './find.js';
 import { initHero } from './hero.js';
 import { initLenis } from './lenis.js';
 import { initMagnetic } from './magnetic.js';
-import { initManifesto, initCraftBento } from './manifesto.js';
+import { initManifesto } from './manifesto.js';
 import { initRange } from './range.js';
 import { prefersReducedMotion } from './utils.js';
 
@@ -49,7 +49,6 @@ async function boot() {
 
   initHero();
   initManifesto();
-  initCraftBento();
   initRange();
   initFind();
   initReveals();

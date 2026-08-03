@@ -1,6 +1,6 @@
 .section--products {
-  background: var(--surface-light);
-  color: var(--color-text-dark);
+  background: var(--surface-canvas);
+  color: var(--color-cream);
   padding-block: clamp(80px, 12vh, 120px);
 }
 
@@ -20,10 +20,11 @@
   width: 100%;
   height: 100%;
   object-fit: contain;
-  filter: brightness(0);
+  filter: brightness(0) invert(1);
 }
 
 .products-head .text-mega {
   max-width: 12ch;
   margin: 0 auto;
+  color: var(--color-cream);
 }

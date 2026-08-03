@@ -8,13 +8,13 @@
   <meta property="og:title" content="Sato Sato">
   <meta property="og:description" content="Cold. Sparkling. Thai. Modern sato for the Thai table.">
   <meta property="og:type" content="website">
-  <meta property="og:image" content="/images/landscape.webp">
-  <meta property="og:image:alt" content="Sato Sato cans on grass islands in a blue landscape">
+  <meta property="og:image" content="/images/can-range-original.webp">
+  <meta property="og:image:alt" content="Sato Sato Original can">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Sato Sato">
   <meta name="twitter:description" content="Cold. Sparkling. Thai. Modern sato for the Thai table.">
-  <meta name="twitter:image" content="/images/landscape.webp">
-  <meta name="theme-color" content="#2d5fa6">
+  <meta name="twitter:image" content="/images/can-range-original.webp">
+  <meta name="theme-color" content="#1b3f7a">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
@@ -53,6 +53,8 @@
     </div>
   </div>
 
+  <div class="watermark" aria-hidden="true"></div>
+
   <header class="nav">
     <a class="nav__logo magnetic" href="#hero" aria-label="Sato Sato home">
       <img src="/images/sato-sato-logo-cream.png" alt="" width="120" height="45" draggable="false">
@@ -62,38 +64,31 @@
 
   <main class="page">
     <section class="hero" id="hero" aria-label="Sato Sato">
-      <div class="hero__stage">
-        <img
-          class="hero__layer hero__sky"
-          src="/images/sky.png"
-          alt=""
-          width="2160"
-          height="1215"
-          fetchpriority="high"
-          draggable="false"
-        >
-        <div class="hero__clouds-track" id="hero-clouds-track" aria-hidden="true">
-          <div class="hero__clouds-inner" id="hero-clouds-inner">
-            <img class="hero__layer hero__clouds" src="/images/clouds.webp" alt="" width="2160" height="1215" draggable="false">
-            <img class="hero__layer hero__clouds" src="/images/clouds.webp" alt="" width="2160" height="1215" draggable="false">
+      <div class="hero__inner">
+        <div class="hero__type">
+          <p class="eyebrow eyebrow--center hero__line">Traditional Sato. Made Modern</p>
+          <h1 class="text-display text-display--center hero__line" id="hero-headline">Cold.<br>Sparkling.<br>Thai.</h1>
+          <div class="hero__cta-row hero__cta-row--center hero__line">
+            <a class="btn btn--primary btn--origin magnetic" href="#find">
+              <span class="btn-origin-fill" aria-hidden="true"></span>
+              <span class="btn-origin-label">Find us</span>
+            </a>
           </div>
         </div>
-        <img
-          class="hero__layer hero__landscape"
-          id="hero-landscape"
-          src="/images/landscape.webp"
-          alt="Sato Sato cans on grass islands in a blue landscape"
-          width="2160"
-          height="1215"
-          draggable="false"
-        >
+        <div class="hero__can-stage can-stage" id="hero-can-stage">
+          <canvas class="can-bubbles" aria-hidden="true"></canvas>
+          <img
+            id="hero-can"
+            class="hero__can"
+            src="/images/can-range-original.webp"
+            alt="Sato Sato Original can"
+            width="400"
+            height="712"
+            fetchpriority="high"
+            draggable="false"
+          >
+        </div>
       </div>
-
-      <h1 class="hero__wordmark" id="hero-wordmark">
-        <span class="hero__wordmark-line">sato</span>
-        <span class="hero__wordmark-tilde" aria-hidden="true">~</span>
-        <span class="hero__wordmark-line">sato</span>
-      </h1>
     </section>
 
     <section class="section section--bento" id="manifesto" aria-label="What it is">
@@ -127,21 +122,6 @@
     </section>
 
     <section class="section section--bento section--bento-b bento-b" id="craft-story" aria-label="Craft story">
-      <div class="bento-b__stage" aria-hidden="true">
-        <img
-          class="bento-b__layer bento-b__sky"
-          src="/images/sky.png"
-          alt=""
-          loading="lazy"
-          draggable="false"
-        >
-        <div class="bento-b__clouds-track">
-          <div class="bento-b__clouds-inner" id="craft-clouds-inner">
-            <img class="bento-b__layer bento-b__clouds" src="/images/clouds.webp" alt="" loading="lazy" draggable="false">
-            <img class="bento-b__layer bento-b__clouds" src="/images/clouds.webp" alt="" loading="lazy" draggable="false">
-          </div>
-        </div>
-      </div>
       <div class="bento-grid">
         <article class="bento-card bento-card--cream reveal">
           <div class="bento-card__inner">
@@ -156,14 +136,10 @@
           </div>
         </article>
 
-        <article class="bento-card bento-card--scene reveal">
-          <img
-            class="bento-b__rice"
-            src="/images/gi-rice.webp"
-            alt=""
-            loading="lazy"
-            onerror="this.src='/images/redesign/bento-craft.webp'"
-          >
+        <article class="bento-card reveal">
+          <div class="bento-card__media">
+            <img src="/images/sticky-rice.webp" alt="" loading="lazy">
+          </div>
         </article>
       </div>
     </section>

@@ -4,6 +4,7 @@
   "private": true,
   "type": "module",
   "scripts": {
+    "predev": "node scripts/ensure-images.mjs",
     "dev": "vite",
     "sync:bible": "node scripts/sync-brand-bible.mjs",
     "build": "vite build && node scripts/ensure-images.mjs",

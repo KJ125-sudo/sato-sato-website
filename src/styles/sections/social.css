@@ -1,6 +1,6 @@
 .section--social {
-  background: var(--surface-light);
-  color: var(--color-text-dark);
+  background: var(--surface-canvas);
+  color: var(--color-cream);
   padding-block: clamp(64px, 10vh, 96px);
 }
 
