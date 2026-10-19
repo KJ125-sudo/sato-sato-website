@@ -10,6 +10,15 @@ function insidePasswordGate() {
   return {
     name: 'inside-password-gate',
     configureServer(server) {
+      server.middlewares.use((req, _res, next) => {
+        const host = req.headers.host || 'localhost';
+        const url = new URL(req.url || '/', `http://${host}`);
+        if (url.pathname === '/privacy') {
+          req.url = '/privacy.html';
+        }
+        next();
+      });
+
       // Login API (mirrors /api/inside-login on Vercel)
       server.middlewares.use(async (req, res, next) => {
         const host = req.headers.host || 'localhost';
@@ -106,6 +115,7 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: resolve(__dirname, 'index.html'),
+        privacy: resolve(__dirname, 'privacy.html'),
       },
     },
   },

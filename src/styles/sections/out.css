@@ -1,0 +1,121 @@
+.section--out {
+  background: var(--color-blue);
+}
+
+.out {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-20);
+}
+
+.out__bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.out__frame {
+  position: relative;
+}
+
+.out__viewport {
+  display: flex;
+  gap: var(--grid-gap);
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  min-width: 0;
+  border-radius: var(--radius-bento);
+}
+
+.out__viewport::-webkit-scrollbar {
+  display: none;
+}
+
+.out__slide {
+  flex: 0 0 100%;
+  aspect-ratio: 3 / 2;
+  height: auto;
+  max-height: 82vh;
+  margin: 0;
+  scroll-snap-align: start;
+  background: var(--color-midnight);
+}
+
+.out__slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.out__btn {
+  position: absolute;
+  top: 50%;
+  z-index: 2;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border: 0;
+  border-radius: 50%;
+  background: var(--color-cream);
+  color: var(--color-text-dark);
+  box-shadow: 0 8px 24px rgba(8, 15, 28, 0.35);
+  cursor: pointer;
+  transform: translateY(-50%);
+}
+
+.out__btn--prev {
+  left: 16px;
+}
+
+.out__btn--next {
+  right: 16px;
+}
+
+.out__btn:hover:not(:disabled) {
+  background: #fff;
+}
+
+.out__btn:disabled {
+  opacity: 0.45;
+  cursor: default;
+}
+
+.out__btn svg {
+  display: block;
+}
+
+.out__count {
+  position: absolute;
+  left: 50%;
+  bottom: 16px;
+  z-index: 2;
+  margin: 0;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: var(--color-cream);
+  color: var(--color-text-dark);
+  font-family: var(--font-ui);
+  font-size: var(--text-caption);
+  letter-spacing: var(--tracking-caption);
+  text-transform: uppercase;
+  transform: translateX(-50%);
+}
+
+@media (max-width: 700px) {
+  .out__btn--prev {
+    left: 10px;
+  }
+
+  .out__btn--next {
+    right: 10px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .out__viewport {
+    scroll-behavior: auto;
+  }
+}

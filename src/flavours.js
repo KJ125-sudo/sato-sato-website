@@ -6,7 +6,9 @@ export const FLAVOURS = [
     productImage: '/images/redesign/product-card-original.webp',
     accent: '#fafaf5',
     accentB: '#c8d4f0',
-    badge: 'Hero',
+    badge: 'Classic',
+    volume: '330 ml',
+    abv: '5% ABV',
     description: 'Cold, lightly sparkling sato brewed from Thai sticky rice.',
   },
   {
@@ -17,6 +19,8 @@ export const FLAVOURS = [
     accent: '#9fd8a8',
     accentB: '#fafaf5',
     badge: 'Citrus',
+    volume: '330 ml',
+    abv: '5% ABV',
     description: 'Bright citrus lift — best with ice and a lime slice.',
   },
   {
@@ -27,6 +31,8 @@ export const FLAVOURS = [
     accent: '#f0c888',
     accentB: '#fafaf5',
     badge: 'Fruit',
+    volume: '330 ml',
+    abv: '5% ABV',
     description: 'Soft melon sweetness for long Thai table meals.',
   },
   {
@@ -34,9 +40,11 @@ export const FLAVOURS = [
     name: 'Krajiab',
     image: '/images/can-range-krajiab.webp',
     productImage: '/images/redesign/product-card-krajiab.webp',
-    accent: '#fafaf5',
-    accentB: '#9fd8a8',
+    accent: '#e8a0b8',
+    accentB: '#fafaf5',
     badge: 'Floral',
-    description: 'Floral roselle notes — a modern Thai table discovery.',
+    volume: '330 ml',
+    abv: '5% ABV',
+    description: 'Floral roselle (กระเจี๊ยบ) — a modern Thai table discovery.',
   },
 ];

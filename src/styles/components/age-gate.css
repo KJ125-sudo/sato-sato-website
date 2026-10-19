@@ -8,6 +8,10 @@
   transition: opacity 0.45s var(--ease), visibility 0.45s var(--ease);
 }
 
+html.age-ok .age-gate {
+  display: none;
+}
+
 .age-gate.is-dismissed {
   opacity: 0;
   visibility: hidden;

@@ -33,60 +33,70 @@
 }
 
 .venues {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: var(--grid-gap);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border-top: 1px solid var(--color-border);
+}
+
+.place-grid + .venues {
+  margin-top: var(--spacing-24);
 }
 
 .venue {
-  display: flex;
-  flex-direction: column;
-  background: var(--surface-card);
-  border-radius: var(--radius-bento);
-  padding: var(--spacing-20);
-  border: 1px solid var(--color-border);
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto auto;
+  align-items: center;
+  gap: var(--spacing-24);
+  padding: var(--spacing-12) 0;
+  border-bottom: 1px solid var(--color-border);
   opacity: 0;
-  min-height: 140px;
-  transition: transform 0.25s var(--ease), border-color 0.25s var(--ease);
 }
 
 .venue.is-visible {
   opacity: 1;
 }
 
-.venue:hover {
-  transform: translateY(-2px);
-  border-color: var(--color-border-strong);
-}
-
 .venue__name {
   font-family: var(--font-display);
-  font-size: var(--text-subheading);
+  font-size: clamp(20px, 2vw, 26px);
   color: var(--color-cream);
-  margin-bottom: var(--spacing-4);
   text-transform: lowercase;
   letter-spacing: -0.02em;
 }
 
 .venue__type {
   font-family: var(--font-ui);
-  font-size: var(--text-caption);
+  font-size: var(--text-ui);
   letter-spacing: var(--tracking-caption);
   text-transform: uppercase;
   color: var(--color-cream-muted);
 }
 
+.venue-group + .venue-group {
+  margin-top: clamp(40px, 6vh, 64px);
+}
+
+.venue-group__title {
+  font-family: var(--font-display);
+  font-size: var(--text-heading-sm);
+  letter-spacing: var(--tracking-heading-sm);
+  text-transform: lowercase;
+  color: var(--color-cream);
+  margin-bottom: var(--spacing-16);
+}
+
 .venue__links {
   display: flex;
-  gap: var(--spacing-10);
-  margin-top: auto;
-  padding-top: var(--spacing-16);
+  gap: var(--spacing-4);
 }
 
 .venue__link {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  width: 44px;
+  height: 44px;
   color: var(--color-cream-muted);
   transition: color 0.2s var(--ease);
 }
@@ -108,14 +118,8 @@
     text-align: left;
   }
 
-  .venues {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 520px) {
-  .venues {
-    grid-template-columns: 1fr;
+  .venue {
+    gap: var(--spacing-12);
   }
 }
 

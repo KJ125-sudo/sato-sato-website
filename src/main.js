@@ -1,15 +1,21 @@
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger.js';
 import { initAgeGate } from './age-gate.js';
+import { initAnalytics } from './analytics.js';
 import { initOriginButtons } from './origin-button.js';
 import { initCanBubbles } from './can-bubbles.js';
 import { initCursor } from './cursor.js';
+import { initOut } from './events.js';
 import { initFind } from './find.js';
 import { initHero } from './hero.js';
 import { initLenis } from './lenis.js';
 import { initMagnetic } from './magnetic.js';
 import { initManifesto } from './manifesto.js';
+import { initNav } from './nav.js';
 import { initRange } from './range.js';
+import { initServe } from './serve.js';
+import { initSocial } from './social.js';
+import { initStockForm } from './stock-form.js';
 import { prefersReducedMotion } from './utils.js';
 
 gsap.registerPlugin(ScrollTrigger);
@@ -36,9 +42,11 @@ function initReveals() {
 }
 
 async function boot() {
+  initAnalytics();
   initCursor();
   initMagnetic();
-  initLenis();
+  const lenis = initLenis();
+  initNav(lenis);
   initOriginButtons();
 
   if (!prefersReducedMotion()) {
@@ -50,7 +58,11 @@ async function boot() {
   initHero();
   initManifesto();
   initRange();
+  initServe();
+  initSocial();
+  initOut();
   initFind();
+  initStockForm();
   initReveals();
 
   ScrollTrigger.refresh();

@@ -1,6 +1,31 @@
+import { AGE_SESSION_KEY } from './site.js';
+
+function rememberAge() {
+  try {
+    sessionStorage.setItem(AGE_SESSION_KEY, '1');
+  } catch {
+    /* private mode can block storage */
+  }
+}
+
+function hasConfirmedAge() {
+  try {
+    return sessionStorage.getItem(AGE_SESSION_KEY) === '1';
+  } catch {
+    return false;
+  }
+}
+
 export function initAgeGate(onVerified) {
   const gate = document.getElementById('age-gate');
   if (!gate) {
+    onVerified();
+    return;
+  }
+
+  if (hasConfirmedAge()) {
+    gate.remove();
+    document.documentElement.classList.add('age-ok');
     onVerified();
     return;
   }
@@ -15,6 +40,7 @@ export function initAgeGate(onVerified) {
   pageContent.forEach((el) => el.setAttribute('inert', ''));
 
   function dismissGate() {
+    rememberAge();
     gate.classList.add('is-dismissed');
     document.body.classList.remove('age-gate-open');
     pageContent.forEach((el) => el.removeAttribute('inert'));

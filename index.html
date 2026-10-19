@@ -3,18 +3,86 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sato Sato — Cold, Sparkling Thai Sato</title>
-  <meta name="description" content="Cold, sparkling sato brewed from Thai sticky rice. Original, Lime, Cantaloupe, Krajiab. Thailand's drink — arrived now.">
+  <title>Sato Sato — Modern Sparkling Sato</title>
+  <meta name="description" content="Sato is Thailand's own fermented sticky rice drink. Sato Sato is the modern version: cold, lightly sparkling and made for Thai food. 330 ml, 5% ABV.">
   <meta property="og:title" content="Sato Sato">
-  <meta property="og:description" content="Cold. Sparkling. Thai. Modern sato for the Thai table.">
+  <meta property="og:description" content="Thailand's own fermented sticky rice drink, made cold and sparkling for the modern table.">
   <meta property="og:type" content="website">
-  <meta property="og:image" content="/images/can-range-original.webp">
-  <meta property="og:image:alt" content="Sato Sato Original can">
+  <meta property="og:image" content="https://www.satosatoth.com/images/og-satosato.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Sato Sato Original can beside the line cold. sparkling. thai.">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Sato Sato">
-  <meta name="twitter:description" content="Cold. Sparkling. Thai. Modern sato for the Thai table.">
-  <meta name="twitter:image" content="/images/can-range-original.webp">
+  <meta name="twitter:description" content="Thailand's own fermented sticky rice drink, made cold and sparkling for the modern table.">
+  <meta name="twitter:image" content="https://www.satosatoth.com/images/og-satosato.jpg">
   <meta name="theme-color" content="#1b3f7a">
+  <link rel="canonical" href="https://www.satosatoth.com/">
+  <meta property="og:url" content="https://www.satosatoth.com/">
+  <link rel="icon" href="/images/sato-sato-logo-cream.png" type="image/png">
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "name": "Sato Sato",
+          "url": "https://www.satosatoth.com/",
+          "email": "satosatobkk@gmail.com",
+          "logo": "https://www.satosatoth.com/images/sato-sato-logo-cream.png",
+          "description": "Modern sato from Bangkok. Sato is Thailand's own fermented sticky rice drink; Sato Sato makes it cold, lightly sparkling and canned at 5% ABV.",
+          "sameAs": ["https://www.instagram.com/satosatobkk/"]
+        },
+        {
+          "@type": "Product",
+          "name": "Sato Sato Original",
+          "description": "Cold, lightly sparkling sato brewed from GI-certified Khon Kaen sticky rice with Japanese koji.",
+          "brand": { "@type": "Brand", "name": "Sato Sato" },
+          "additionalProperty": [
+            { "@type": "PropertyValue", "name": "Volume", "value": "330 ml" },
+            { "@type": "PropertyValue", "name": "ABV", "value": "5%" }
+          ]
+        },
+        {
+          "@type": "Product",
+          "name": "Sato Sato Lime",
+          "description": "Bright citrus lift — best with ice and a lime slice.",
+          "brand": { "@type": "Brand", "name": "Sato Sato" },
+          "additionalProperty": [
+            { "@type": "PropertyValue", "name": "Volume", "value": "330 ml" },
+            { "@type": "PropertyValue", "name": "ABV", "value": "5%" }
+          ]
+        },
+        {
+          "@type": "Product",
+          "name": "Sato Sato Cantaloupe",
+          "description": "Soft melon sweetness for long Thai table meals.",
+          "brand": { "@type": "Brand", "name": "Sato Sato" },
+          "additionalProperty": [
+            { "@type": "PropertyValue", "name": "Volume", "value": "330 ml" },
+            { "@type": "PropertyValue", "name": "ABV", "value": "5%" }
+          ]
+        },
+        {
+          "@type": "Product",
+          "name": "Sato Sato Krajiab",
+          "description": "Floral roselle (krajiab) — a modern Thai table discovery.",
+          "brand": { "@type": "Brand", "name": "Sato Sato" },
+          "additionalProperty": [
+            { "@type": "PropertyValue", "name": "Volume", "value": "330 ml" },
+            { "@type": "PropertyValue", "name": "ABV", "value": "5%" }
+          ]
+        }
+      ]
+    }
+  </script>
+  <script>
+    try {
+      if (sessionStorage.getItem('sato-age-ok') === '1') {
+        document.documentElement.classList.add('age-ok');
+      }
+    } catch (e) {}
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
@@ -34,7 +102,7 @@
       >
       <div class="age-gate__prompt">
         <p class="eyebrow eyebrow--center eyebrow--dark">Age verification</p>
-        <h1 class="text-heading text-heading--dark age-gate__title" id="age-gate-title">Are you 21<br>or older?</h1>
+        <h1 class="text-heading text-heading--dark age-gate__title" id="age-gate-title">Are you 20<br>or older?</h1>
         <p class="text-body text-body--dark text-body--center age-gate__copy">
           You must be of legal drinking age to enter this site. Please confirm your age to continue.
         </p>
@@ -46,7 +114,7 @@
       <div class="age-gate__declined" hidden>
         <p class="eyebrow eyebrow--center eyebrow--dark">Access denied</p>
         <p class="text-body text-body--dark text-body--center age-gate__copy">
-          Sorry, you must be 21 or older to visit this site.
+          Sorry, you must be 20 or older to visit this site.
         </p>
       </div>
       <p class="age-gate__legal">Drink responsibly · สาโท สาโท</p>
@@ -56,20 +124,30 @@
   <div class="watermark" aria-hidden="true"></div>
 
   <header class="nav">
+    <a class="skip-link" href="#hero">Skip to content</a>
     <a class="nav__logo magnetic" href="#hero" aria-label="Sato Sato home">
       <img src="/images/sato-sato-logo-cream.png" alt="" width="120" height="45" draggable="false">
     </a>
-    <a class="btn btn--pill-outline nav__cta magnetic" href="#find">Find us</a>
+    <button type="button" class="nav__toggle btn btn--pill-outline" aria-expanded="false" aria-controls="site-nav">Menu</button>
+    <nav class="nav__links" id="site-nav" aria-label="Primary">
+      <a href="#story">Story</a>
+      <a href="#range">Flavours</a>
+      <a href="#serve">Serve</a>
+      <a href="#out">Out there</a>
+      <a href="#find">Venues</a>
+      <a href="#trade">Stock</a>
+    </nav>
   </header>
 
   <main class="page">
     <section class="hero" id="hero" aria-label="Sato Sato">
       <div class="hero__inner">
         <div class="hero__type">
-          <p class="eyebrow eyebrow--center hero__line">Traditional Sato. Made Modern</p>
-          <h1 class="text-display text-display--center hero__line" id="hero-headline">Cold.<br>Sparkling.<br>Thai.</h1>
-          <div class="hero__cta-row hero__cta-row--center hero__line">
-            <a class="btn btn--primary btn--origin magnetic" href="#find">
+          <p class="eyebrow hero__line">Traditional Sato. Made Modern</p>
+          <h1 class="text-display hero__line" id="hero-headline">Cold.<br>Sparkling.<br>Thai.</h1>
+          <p class="text-body hero__lede hero__line">Sato is Thailand's own fermented sticky rice drink. Sato Sato is the modern version.</p>
+          <div class="hero__cta-row hero__line">
+            <a class="btn btn--primary btn--origin magnetic hero__cta" href="#find" data-track="find_us">
               <span class="btn-origin-fill" aria-hidden="true"></span>
               <span class="btn-origin-label">Find us</span>
             </a>
@@ -91,16 +169,16 @@
       </div>
     </section>
 
-    <section class="section section--bento" id="manifesto" aria-label="What it is">
+    <section class="section section--bento bento-b" id="story" aria-label="What it is">
       <div class="bento-grid">
         <article class="bento-card bento-card--motif" id="bento-can-showcase">
           <div class="bento-card__fish-watermark" aria-hidden="true"></div>
-          <div class="bento-can-stack-wrap" aria-hidden="true">
+          <div class="bento-can-stack-wrap">
             <div class="bento-can-stack" id="bento-can-stack">
-              <img class="bento-can-stack__can" src="/images/can-range-original.webp" alt="" loading="lazy" data-tilt="-14">
-              <img class="bento-can-stack__can" src="/images/can-range-lime.webp" alt="" loading="lazy" data-tilt="10">
-              <img class="bento-can-stack__can" src="/images/can-range-cantaloupe.webp" alt="" loading="lazy" data-tilt="-8">
-              <img class="bento-can-stack__can" src="/images/can-range-krajiab.webp" alt="" loading="lazy" data-tilt="12">
+              <img class="bento-can-stack__can" src="/images/can-range-original.webp" alt="Sato Sato Original can" loading="lazy" data-tilt="-14">
+              <img class="bento-can-stack__can" src="/images/can-range-lime.webp" alt="Sato Sato Lime can" loading="lazy" data-tilt="10">
+              <img class="bento-can-stack__can" src="/images/can-range-cantaloupe.webp" alt="Sato Sato Cantaloupe can" loading="lazy" data-tilt="-8">
+              <img class="bento-can-stack__can" src="/images/can-range-krajiab.webp" alt="Sato Sato Krajiab can" loading="lazy" data-tilt="12">
             </div>
           </div>
         </article>
@@ -114,16 +192,11 @@
                 alt="Sato Sato Original can floating in the sky"
                 loading="lazy"
               >
-              <p class="bento-card__split-caption text-heading">this is traditional sato. made modern.</p>
             </div>
           </div>
         </article>
-      </div>
-    </section>
 
-    <section class="section section--bento section--bento-b bento-b" id="craft-story" aria-label="Craft story">
-      <div class="bento-grid">
-        <article class="bento-card bento-card--cream reveal">
+        <article class="bento-card bento-card--cream bento-card--wide reveal">
           <div class="bento-card__inner">
             <div class="bento-icon-badge">
               <img src="/images/fish-motif-solid.png" alt="" width="40" height="40">
@@ -132,13 +205,8 @@
             <p class="text-body text-body--dark">
               Sato has been brewed in Isan from sticky rice for generations. But never like this.
             </p>
-            <a class="btn btn--pill magnetic" href="#find">Find us</a>
-          </div>
-        </article>
-
-        <article class="bento-card reveal">
-          <div class="bento-card__media">
-            <img src="/images/sticky-rice.webp" alt="" loading="lazy">
+            <p class="story-facts">GI-certified Khon Kaen rice · Japanese koji · 330 ml · 5% ABV</p>
+            <a class="btn btn--pill magnetic" href="#range" data-track="see_flavours">See the four flavours</a>
           </div>
         </article>
       </div>
@@ -156,32 +224,55 @@
       </div>
     </section>
 
-    <section class="section section--social" id="social" aria-label="Follow Sato Sato">
+    <section class="section section--serve" id="serve" aria-labelledby="serve-title">
       <div class="section__inner">
-        <div class="social-grid">
-          <article class="social-card reveal">
-            <img
-              class="social-card__logo"
-              src="/images/social/instagram.svg"
-              alt="Instagram"
-              width="120"
-              height="120"
-              loading="lazy"
-            >
-            <a class="btn btn--pill magnetic" href="#">Follow on Instagram</a>
-          </article>
+        <div class="serve-top">
+          <div class="serve-head reveal">
+            <p class="eyebrow">How to serve</p>
+            <h2 class="text-heading" id="serve-title">Cold. Ice. Lime.</h2>
+            <p class="text-body">Made for the Thai table. Drink cold. Drink with friends. Drink again.</p>
+          </div>
+          <figure class="serve-photo reveal">
+            <img src="/images/events/event-06.jpg" alt="A hand passing an Original can beside a Sato Sato cup at the bar" width="1600" height="1066" loading="lazy">
+          </figure>
+        </div>
+        <ol class="serve-strip">
+          <li class="serve-step">
+            <p class="serve-step__num">01</p>
+            <h3 class="serve-step__title">Cold can</h3>
+            <p class="serve-step__copy">Straight from the can is completely correct.</p>
+          </li>
+          <li class="serve-step">
+            <p class="serve-step__num">02</p>
+            <h3 class="serve-step__title">Tall glass</h3>
+            <p class="serve-step__copy">Lots of ice. No ceremony.</p>
+          </li>
+          <li class="serve-step">
+            <p class="serve-step__num">03</p>
+            <h3 class="serve-step__title">Lime wedge</h3>
+            <p class="serve-step__copy">Welcome on the side, never required.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
 
-          <article class="social-card reveal">
-            <img
-              class="social-card__logo"
-              src="/images/social/line.svg"
-              alt="LINE"
-              width="120"
-              height="120"
-              loading="lazy"
-            >
-            <a class="btn btn--pill magnetic" href="#">Add us on LINE</a>
-          </article>
+    <section class="section section--out" id="out" aria-labelledby="out-title">
+      <div class="section__inner out">
+        <div class="out__bar">
+          <div class="out__copy">
+            <p class="eyebrow">Out there</p>
+            <h2 class="text-heading" id="out-title">In the room.</h2>
+          </div>
+        </div>
+        <div class="out__frame">
+          <div class="out__viewport" id="out-track" tabindex="0" role="region" aria-roledescription="carousel" aria-label="Sato Sato out in the world"></div>
+          <button type="button" class="out__btn out__btn--prev" data-out-prev aria-label="Previous photo">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg>
+          </button>
+          <button type="button" class="out__btn out__btn--next" data-out-next aria-label="Next photo">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg>
+          </button>
+          <p class="out__count" data-out-count>1 / 1</p>
         </div>
       </div>
     </section>
@@ -191,51 +282,72 @@
         <div class="find-head reveal">
           <div>
             <p class="eyebrow">Find us</p>
-            <h2 class="text-heading-lg" id="find-title">Bangkok.<br>At the table.</h2>
+            <h2 class="text-heading-lg" id="find-title">At the table.</h2>
           </div>
           <div class="find-contact">
             <a class="magnetic" href="mailto:satosatobkk@gmail.com">satosatobkk@gmail.com</a>
             <span>Stock enquiries</span>
           </div>
         </div>
-        <div class="venues" id="venues"></div>
+        <div id="venues"></div>
       </div>
     </section>
+
+    <section class="section section--social" id="social" aria-label="Follow Sato Sato" hidden></section>
   </main>
 
   <footer class="footer">
     <div class="footer__inner">
-      <div class="footer__newsletter reveal">
-        <img class="footer__newsletter-thumb" src="/images/can-range-original.webp" alt="" loading="lazy">
-        <div class="footer__newsletter-copy">
-          <p class="footer__newsletter-eyebrow">Stay in the loop</p>
-          <p class="footer__newsletter-title">New venues &amp; drops</p>
+      <form class="stock-form" id="trade" novalidate>
+        <p class="footer__newsletter-eyebrow">Stock a venue</p>
+        <p class="stock-form__title">Tell us where it should pour.</p>
+        <div class="stock-form__field">
+          <label for="stock-name">Name</label>
+          <input id="stock-name" name="name" type="text" autocomplete="name" required>
         </div>
-        <a class="btn btn--circle magnetic" href="mailto:satosatobkk@gmail.com" aria-label="Email Sato Sato">→</a>
-      </div>
+        <div class="stock-form__field">
+          <label for="stock-venue">Venue</label>
+          <input id="stock-venue" name="venue" type="text" autocomplete="organization" required>
+        </div>
+        <div class="stock-form__field">
+          <label for="stock-city">City</label>
+          <input id="stock-city" name="city" type="text" autocomplete="address-level2" required>
+        </div>
+        <div class="stock-form__field">
+          <label for="stock-message">Message</label>
+          <textarea id="stock-message" name="message" required></textarea>
+        </div>
+        <p class="stock-form__error" id="stock-error" role="alert" hidden></p>
+        <p class="stock-form__status" id="stock-status" role="status"></p>
+        <button class="btn btn--pill" type="submit">Send enquiry</button>
+        <p class="stock-form__note">This opens your email app, addressed to satosatobkk@gmail.com.</p>
+      </form>
       <nav class="footer__nav reveal" aria-label="Footer">
         <div>
           <p class="footer__col-title">Range</p>
           <ul class="footer__links">
-            <li><a href="#range">Original</a></li>
-            <li><a href="#range">Lime</a></li>
-            <li><a href="#range">Cantaloupe</a></li>
-            <li><a href="#range">Krajiab</a></li>
+            <li><a href="#original">Original</a></li>
+            <li><a href="#lime">Lime</a></li>
+            <li><a href="#cantaloupe">Cantaloupe</a></li>
+            <li><a href="#krajiab">Krajiab</a></li>
           </ul>
         </div>
         <div>
           <p class="footer__col-title">Find us</p>
           <ul class="footer__links">
-            <li><a href="#find">Bangkok venues</a></li>
-            <li><a href="#find">Phuket venues</a></li>
-            <li><a href="mailto:satosatobkk@gmail.com">Stock enquiries</a></li>
+            <li><a href="#out">Out there</a></li>
+            <li><a href="#venues-bangkok">Bangkok venues</a></li>
+            <li><a href="#venues-nonthaburi">Nonthaburi venues</a></li>
+            <li><a href="#venues-phuket">Phuket venues</a></li>
+            <li><a href="#trade">Stock enquiries</a></li>
           </ul>
         </div>
         <div>
           <p class="footer__col-title">Contact</p>
           <ul class="footer__links">
             <li><a href="mailto:satosatobkk@gmail.com">Email</a></li>
-            <li><a href="#hero">About</a></li>
+            <li><a href="#story">Story</a></li>
+            <li><a href="/privacy">Privacy</a></li>
           </ul>
         </div>
       </nav>

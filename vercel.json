@@ -4,7 +4,8 @@
     { "source": "/Inside/", "destination": "/Inside/index.html" },
     { "source": "/Inside/login", "destination": "/Inside/login.html" },
     { "source": "/Inside/education", "destination": "/Inside/education.html" },
-    { "source": "/Inside/campaigns", "destination": "/Inside/campaigns.html" }
+    { "source": "/Inside/campaigns", "destination": "/Inside/campaigns.html" },
+    { "source": "/privacy", "destination": "/privacy.html" }
   ],
   "headers": [
     {

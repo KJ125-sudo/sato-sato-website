@@ -26,17 +26,12 @@ body {
   overflow-x: hidden;
 }
 
-body.has-custom-cursor {
-  cursor: none;
-}
-
-body.has-custom-cursor a,
-body.has-custom-cursor button {
-  cursor: none;
-}
-
 body.age-gate-open {
   overflow: hidden;
+}
+
+[hidden] {
+  display: none !important;
 }
 
 img {
@@ -56,6 +51,49 @@ button {
   border: none;
   background: none;
   color: inherit;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-cream);
+  outline-offset: 3px;
+}
+
+.bento-card :focus-visible,
+.product-card :focus-visible,
+.age-gate :focus-visible,
+.stock-form :focus-visible {
+  outline-color: var(--color-midnight);
+}
+
+.skip-link {
+  position: fixed;
+  top: 12px;
+  left: 16px;
+  z-index: 200;
+  transform: translateY(-140%);
+  background: var(--color-cream);
+  color: var(--color-midnight);
+  font-family: var(--font-ui);
+  font-size: var(--text-ui);
+  letter-spacing: var(--tracking-ui);
+  text-transform: uppercase;
+  padding: 10px 16px;
+  border-radius: var(--radius-pill);
+}
+
+.skip-link:focus {
+  transform: none;
+}
+
+.section {
+  scroll-margin-top: max(0px, calc(var(--nav-h) + 8px - var(--section-gap)));
+}
+
+.section--bento,
+.product-card,
+.venue-group,
+.stock-form {
+  scroll-margin-top: calc(var(--nav-h) + 12px);
 }
 
 /* Custom cursor */

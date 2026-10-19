@@ -4,6 +4,7 @@ export function renderProductCard(flavour) {
   return `
     <article
       class="product-card reveal"
+      id="${flavour.id}"
       style="--product-accent-a: ${flavour.accent}; --product-accent-b: ${flavour.accentB};"
       data-flavour="${flavour.id}"
     >
@@ -25,6 +26,7 @@ export function renderProductCard(flavour) {
           <img class="product-card__thumb" src="${flavour.image}" alt="" loading="lazy">
           <div class="product-card__meta">
             <p class="product-card__name">${flavour.name}</p>
+            <p class="product-card__facts">${flavour.volume} · ${flavour.abv}</p>
             <p class="product-card__desc">${flavour.description}</p>
           </div>
           <div class="product-card__price-col">
