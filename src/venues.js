@@ -20,27 +20,6 @@ export const VENUES = [
     maps: 'https://share.google/4BAHEISuPejjeqiOA',
   },
   {
-    name: 'Jim Thompson',
-    type: 'Restaurant',
-    location: 'Bangkok',
-    instagram: 'https://www.instagram.com/jimthompsonathairestaurant/?hl=en',
-    maps: 'https://share.google/yH9pDW3AgLJhjcmeh',
-  },
-  {
-    name: 'Siam @ Siam Design Hotel',
-    type: 'Hotel',
-    location: 'Bangkok',
-    instagram: 'https://www.instagram.com/siamatsiambangkok/?hl=en',
-    maps: 'https://share.google/0bGZ2W8rGZBf2EyJ5',
-  },
-  {
-    name: 'Intercontinental Phuket',
-    type: 'Resort',
-    location: 'Phuket',
-    instagram: 'https://www.instagram.com/intercontinentalphuket/',
-    maps: 'https://share.google/uPWG3mdcZ75FLfFvU',
-  },
-  {
     name: 'Rice 9',
     location: 'Bangkok',
     instagram: 'https://www.instagram.com/rice9gelato/',
@@ -48,7 +27,7 @@ export const VENUES = [
   },
   {
     name: 'Craft Estate',
-    location: 'Nonthaburi',
+    location: 'Bangkok',
     instagram: 'https://www.instagram.com/craft.estate/?hl=en',
     maps: 'https://share.google/8bNbkS8PT931WYfGC',
   },

@@ -66,7 +66,7 @@ export const PLACES = [
   {
     name: 'Craft Estate',
     area: 'Bang Si Muang · Nonthaburi',
-    location: 'Nonthaburi',
+    location: 'Bangkok',
     instagram: 'https://www.instagram.com/craft.estate/',
     maps: 'https://share.google/8bNbkS8PT931WYfGC',
     venueName: 'Craft Estate',
